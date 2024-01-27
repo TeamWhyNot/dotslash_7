@@ -17,7 +17,7 @@ ChartJS.register(
   Tooltip
 );
 
-const LineChartRevenue = ({ chartData, max }) => {
+const LineChartRevenue = ({ chartData, chartDataByYearPredicted, max }) => {
   const data = {
     labels: [
       "Jan",
@@ -35,10 +35,18 @@ const LineChartRevenue = ({ chartData, max }) => {
     ],
     datasets: [
       {
-        label: "Total Revenue",
+        label: "Current Revenue",
         data: chartData,
         backgroundColor: "black",
         borderColor: "#FF9800",
+        pointBorderColor: "black",
+        tension: 0.4,
+      },
+      {
+        label: "Predicted Chart Line",
+        data: chartDataByYearPredicted, // Using the same data for the second line
+        backgroundColor: "rgba(0, 0, 0, 0)", // Transparent background
+        borderColor: "#00FF00", // Green color
         pointBorderColor: "black",
         tension: 0.4,
       },
