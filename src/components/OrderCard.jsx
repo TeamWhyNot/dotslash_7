@@ -1,9 +1,69 @@
-import React from 'react'
+import React, { useContext } from "react";
+import kurta from "../assets/mobile/kurtagirl.svg";
+import { Button } from "./Button";
+import authContext from "../context/authContext";
 
-const OrderCard = () => {
+const OrderCard = ({
+  onGoing,
+  orderToken,
+  orderItemName,
+  orderPrice,
+  orderCategory,
+  orderDate,
+}) => {
+  const { orders, setOrders } = useContext(authContext);
+
+  const handleCancelPickup = () => {
+    setOrders((prevOrders) =>
+      prevOrders.filter((order) => order.orderToken !== orderToken)
+    );
+  };
+
   return (
-    <div>OrderCard</div>
-  )
-}
+    <div className=" border-t-[0.001rem] p-2 w-[100%]  ">
+      <div className=" gap-2 flex items-center ">
+        <div>
+          <img src={kurta} className="rounded-lg"></img>
+        </div>
+        <div className="flex-col space-y-2 w-[70%]">
+          <div className="flex justify-between w-full">
+            <h1 className="text-xl">{orderItemName}</h1>
+            <p className="text-sm font-light text-dark-main">
+              {" "}
+              Token ID: {orderToken}
+            </p>
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-sm">{orderCategory}</h1>
+            <div>
+              <span className="text-sm font-medium text-dark-main">Date: </span>
+              <span className="text-xs font-light text-dark-main">
+                {orderDate}
+              </span>
+            </div>
+          </div>
+          <div>
+            <h1 className=" text-darkOrange">Rs {orderPrice}</h1>
+          </div>
 
-export default OrderCard
+          <div className="flex items-center justify-between">
+            {onGoing ? (
+              <Button
+                className="px-2 py-1.5 rounded-full text-xs w-full bg-white text-darkOrange border border-darkOrange"
+                onClick={handleCancelPickup}
+              >
+                Cancel Pickup
+              </Button>
+            ) : (
+              <Button className="px-2 py-1.5 rounded-full text-xs w-full bg-darkOrange text-white">
+                Get Coupons
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OrderCard;
