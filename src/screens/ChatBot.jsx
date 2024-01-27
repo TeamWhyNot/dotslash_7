@@ -40,7 +40,7 @@ const ChatBot = () => {
 
   const [messages, setMessages] = useState([
     { message: "Hello! How can I help you?", isSender: false },
-    { message: "Hi there! I have a question.", isSender: true },
+    
     // Add more messages as needed
   ]);
 
