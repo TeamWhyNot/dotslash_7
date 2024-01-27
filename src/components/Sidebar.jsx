@@ -19,7 +19,7 @@ const Sidebar = () => {
     return (
         <div>
             <div className="desktop">
-                <div className=' side h-[100vh] w-[20rem] flex  justify-center '>
+                <div className=' side h-[100vh] w-[20rem] flex  justify-center bg-white border-r-darkOrange '>
                     <div className="mainBar flex flex-col items-center h-[100vh] gap-[3rem] w-[15rem] bg-transparent">
                         <div className="logo mt-4 flex gap-2  items-center">
                             <div>
@@ -41,7 +41,7 @@ const Sidebar = () => {
                                 </Link>
                             ))}
                         </div>
-                        <Button className='h-[2.5rem] w-[6rem]'>Logout</Button>
+                        <Button className='h-[2.5rem] w-[6rem] '>Logout</Button>
                     </div>
                 </div>
             </div>

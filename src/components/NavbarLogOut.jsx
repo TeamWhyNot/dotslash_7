@@ -14,9 +14,19 @@ const NavbarLogOut = () => {
           </Link>
         </div>
         <div className="flex items-center font-medium justify-between w-[30%] text-black text-lg gap-x-5 font-inter ">
-          <div className="cursor-pointer">Shop</div>
-          <div className=" cursor-pointer">Advice</div>
-          <div className=" cursor-pointer">Analytics</div>
+          <Link to="/myshop">
+            <div className="cursor-pointer">Shop</div>
+          </Link>
+          <Link to='/chatbot'>
+            <div className=" cursor-pointer">Advice</div>
+          </Link>
+          <Link to='/analytics'>
+            <div className=" cursor-pointer">Analytics</div>
+          </Link>
+          <Link to='/shopkeeperorderpage'>
+            <div className=" cursor-pointer">Orders</div>
+          </Link>
+        
         </div>
 
         <div className="flex gap-5 justify-center items-center">
