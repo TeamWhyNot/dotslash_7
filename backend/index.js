@@ -10,6 +10,7 @@ connectTOMongo();
 
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/shop',require('./routes/shop'))
+app.use('/api/product',require('./routes/product'))
 
 
 

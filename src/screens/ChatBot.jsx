@@ -3,10 +3,41 @@ import NavbarLogOut from "../components/NavbarLogOut";
 import chatboticon from "../assets/chatbot.svg";
 import chatboticon2 from "../assets/chatbot2.svg";
 import send from "../assets/send.svg";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import Sidebar from '../components/Sidebar';
 
 const ChatBot = () => {
   const [inputValue, setInputValue] = useState("");
+
+  const handleClick = async () => {
+    const genAI = new GoogleGenerativeAI("AIzaSyA5pe423GwkXbEUI2v7Nr7yBbDnqgAZ2Qg");
+    const generationConfig = {
+      temperature: 0.9,
+      topK: 1,
+      topP: 1,
+      maxOutputTokens: 2048,
+    };
+
+    // ...
+
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const parts = [
+      { text: "how should one behave in front of parents give answer in 100 words" },
+    ];
+
+    const result = await model.generateContent({
+
+      contents: [{ role: "user", parts }],
+      generationConfig,
+
+    });
+
+    const response = result.response;
+    console.log(response.text());
+
+
+
+  }
 
   const [messages, setMessages] = useState([
     { message: "Hello! How can I help you?", isSender: false },
@@ -14,14 +45,45 @@ const ChatBot = () => {
     // Add more messages as needed
   ]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(inputValue);
     const msg = {
       message: inputValue,
       isSender: true,
     };
+    const genAI = new GoogleGenerativeAI("AIzaSyA5pe423GwkXbEUI2v7Nr7yBbDnqgAZ2Qg");
+    const generationConfig = {
+      temperature: 0.9,
+      topK: 1,
+      topP: 1,
+      maxOutputTokens: 2048,
+    };
+
+    // ...
+
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const parts = [
+      { text: inputValue },
+    ];
     setMessages((prevMessages) => [...prevMessages, msg]);
+
+    setInputValue("");
+
+    const result = await model.generateContent({
+
+      contents: [{ role: "user", parts }],
+      generationConfig,
+
+    });
+
+    const response = result.response;
+    console.log(response.text());
+    const msg2 = {
+      message: response.text(),
+      isSender: false,
+    };
+    setMessages((prevMessages) => [...prevMessages, msg2]);
 
     setInputValue("");
   };
