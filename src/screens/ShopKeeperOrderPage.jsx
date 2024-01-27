@@ -27,7 +27,7 @@ const ShopKeeperOrderPage = () => {
       id: 1,
       tokenID: "#AHGA68",
       date: "23/09/2022",
-      customer: "Jacob Marcus",
+      customer: "Toyash Patil",
       payableAmount: 100,
       paidAmount: 0.0,
     },
@@ -35,7 +35,7 @@ const ShopKeeperOrderPage = () => {
       id: 2,
       tokenID: "#AHGA69",
       date: "24/09/2022",
-      customer: "John Doe",
+      customer: "Jiya Trivedi",
       payableAmount: 150,
       paidAmount: 50.0,
     },
@@ -43,7 +43,7 @@ const ShopKeeperOrderPage = () => {
       id: 3,
       tokenID: "#AHGA70",
       date: "25/09/2022",
-      customer: "Jane Smith",
+      customer: "Atharva Upare",
       payableAmount: 120,
       paidAmount: 80.0,
     },
@@ -51,7 +51,7 @@ const ShopKeeperOrderPage = () => {
       id: 4,
       tokenID: "#AHGA71",
       date: "26/09/2022",
-      customer: "Alice Johnson",
+      customer: "Manas Waghmare",
       payableAmount: 80,
       paidAmount: 30.0,
     },
@@ -59,7 +59,7 @@ const ShopKeeperOrderPage = () => {
       id: 5,
       tokenID: "#AHGA72",
       date: "27/09/2022",
-      customer: "Bob Williams",
+      customer: "Suresh Singh",
       payableAmount: 200,
       paidAmount: 150.0,
     },
@@ -67,7 +67,7 @@ const ShopKeeperOrderPage = () => {
       id: 6,
       tokenID: "#AHGA73",
       date: "28/09/2022",
-      customer: "Eva Davis",
+      customer: "Sania Sharma",
       payableAmount: 90,
       paidAmount: 60.0,
     },
@@ -83,7 +83,7 @@ const ShopKeeperOrderPage = () => {
       id: 8,
       tokenID: "#AHGA75",
       date: "30/09/2022",
-      customer: "Lily Taylor",
+      customer: "Arun Shetty",
       payableAmount: 130,
       paidAmount: 100.0,
     },
@@ -91,7 +91,7 @@ const ShopKeeperOrderPage = () => {
       id: 9,
       tokenID: "#AHGA76",
       date: "01/10/2022",
-      customer: "Mike Wilson",
+      customer: "Mike Tyson",
       payableAmount: 180,
       paidAmount: 130.0,
     },
@@ -99,7 +99,7 @@ const ShopKeeperOrderPage = () => {
       id: 10,
       tokenID: "#AHGA77",
       date: "02/10/2022",
-      customer: "Nina Martinez",
+      customer: "Jayesh Sutaria",
       payableAmount: 250,
       paidAmount: 200.0,
     },
@@ -186,20 +186,21 @@ const ShopKeeperOrderPage = () => {
   ];
 
   return (
-    <div className="desktop h-[100vh]  flex ">
-      <div className="h-[100%] w-[25%] flex gap-6">
+    <div className="desktop h-[100vh]  flex flex-col ">
+      {/* <div className="h-[100%] w-[25%] flex gap-6">
         <Sidebar></Sidebar>
-      </div>
+      </div> */}
+      <NavbarLogOut></NavbarLogOut>
 
-      <div className="h-[100%] w-[75%] ">
-        <div className="px-8 py-16 flex gap-y-8 flex-col justify-center h-[20%] w-full ">
-          <p className=" text-4xl font-semibold">My Orders</p>
-          <p className="py-2 text-xl font-semibold text-dark-main">
+      <div className="h-[100%] w-[100%] ">
+        <div className="px-8 py-12 flex gap-y-8 flex-col items-center justify-center h-[20%] w-full  ">
+          <p className=" text-4xl font-semibold text-darkOrange">My Orders</p>
+          <p className=" text-xl font-semibold text-dark-main">
             Yet to be collected
           </p>
         </div>
-        <div className="w-full flex items-center px-8">
-          <div className="h-[50%] w-[70%] flex items-start justify-start">
+        <div className="w-full flex items-center justify-center px-2">
+          <div className="h-[50%] w-fit flex items-start justify-start">
             <DataGrid
               rows={rows}
               columns={columns}

@@ -1,30 +1,16 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import authContext from "./authContext";
 
 const AuthState = (props) => {
+  useEffect(() => {
+    
+  
+    
+  }, [localStorage.getItem('authToken')])
+  
   const [Uid, setUid] = useState("");
   const [userDetail, setUserDetail] = useState({});
-  const [productData, setProductData] = useState([
-    //TODO: DELETE THIS LATER
-    {
-      imgurl: require("../assets/sample1.png"),
-      productName: "Product 1",
-      productPrice: 800,
-      productType: "Medicine",
-      productDescription: "desc123131",
-      productInStock: false,
-      productQuantity: 491,
-    },
-    {
-      imgurl: require("../assets/sample1.png"),
-      productName: "Product 2",
-      productPrice: 900,
-      productType: "Clothing",
-      productDescription: "Deescpoaojpfaf",
-      productInStock: true,
-      productQuantity: 491,
-    },
-  ]);
+  
 
   const [bag, setBag] = useState([
     {
@@ -106,8 +92,7 @@ const AuthState = (props) => {
         login,
         createUser,
         setUid,
-        productData,
-        setProductData,
+        
         bag,
         setBag,
         orders,
