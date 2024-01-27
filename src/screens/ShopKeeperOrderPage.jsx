@@ -5,50 +5,201 @@ import { DataGrid } from "@mui/x-data-grid";
 
 const ShopKeeperOrderPage = () => {
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
-    { field: "firstName", headerName: "First name", width: 130 },
-    { field: "lastName", headerName: "Last name", width: 130 },
+    { field: "tokenID", headerName: "TokenID", width: 170 },
+    { field: "date", headerName: "Date", width: 130 },
+    { field: "customer", headerName: "Customer", width: 130 },
     {
-      field: "age",
-      headerName: "Age",
+      field: "payableAmount",
+      headerName: "Payable Amount",
       type: "number",
-      width: 90,
+      width: 130,
     },
     {
-      field: "fullName",
-      headerName: "Full name",
-      description: "This column has a value getter and is not sortable.",
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ""} ${params.row.lastName || ""}`,
+      field: "paidAmount",
+      headerName: "Paid Amount",
+      type: "number",
+      width: 130,
     },
   ];
 
   const rows = [
-    { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-    { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-    { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-    { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-    { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-    { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
-    { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-    { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-    { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+    {
+      id: 1,
+      tokenID: "#AHGA68",
+      date: "23/09/2022",
+      customer: "Jacob Marcus",
+      payableAmount: 100,
+      paidAmount: 0.0,
+    },
+    {
+      id: 2,
+      tokenID: "#AHGA69",
+      date: "24/09/2022",
+      customer: "John Doe",
+      payableAmount: 150,
+      paidAmount: 50.0,
+    },
+    {
+      id: 3,
+      tokenID: "#AHGA70",
+      date: "25/09/2022",
+      customer: "Jane Smith",
+      payableAmount: 120,
+      paidAmount: 80.0,
+    },
+    {
+      id: 4,
+      tokenID: "#AHGA71",
+      date: "26/09/2022",
+      customer: "Alice Johnson",
+      payableAmount: 80,
+      paidAmount: 30.0,
+    },
+    {
+      id: 5,
+      tokenID: "#AHGA72",
+      date: "27/09/2022",
+      customer: "Bob Williams",
+      payableAmount: 200,
+      paidAmount: 150.0,
+    },
+    {
+      id: 6,
+      tokenID: "#AHGA73",
+      date: "28/09/2022",
+      customer: "Eva Davis",
+      payableAmount: 90,
+      paidAmount: 60.0,
+    },
+    {
+      id: 7,
+      tokenID: "#AHGA74",
+      date: "29/09/2022",
+      customer: "George Brown",
+      payableAmount: 110,
+      paidAmount: 70.0,
+    },
+    {
+      id: 8,
+      tokenID: "#AHGA75",
+      date: "30/09/2022",
+      customer: "Lily Taylor",
+      payableAmount: 130,
+      paidAmount: 100.0,
+    },
+    {
+      id: 9,
+      tokenID: "#AHGA76",
+      date: "01/10/2022",
+      customer: "Mike Wilson",
+      payableAmount: 180,
+      paidAmount: 130.0,
+    },
+    {
+      id: 10,
+      tokenID: "#AHGA77",
+      date: "02/10/2022",
+      customer: "Nina Martinez",
+      payableAmount: 250,
+      paidAmount: 200.0,
+    },
+    {
+      id: 11,
+      tokenID: "#AHGA78",
+      date: "03/10/2022",
+      customer: "Oliver Lee",
+      payableAmount: 70,
+      paidAmount: 20.0,
+    },
+    {
+      id: 12,
+      tokenID: "#AHGA79",
+      date: "04/10/2022",
+      customer: "Patricia Garcia",
+      payableAmount: 160,
+      paidAmount: 120.0,
+    },
+    {
+      id: 13,
+      tokenID: "#AHGA80",
+      date: "05/10/2022",
+      customer: "Quincy Adams",
+      payableAmount: 140,
+      paidAmount: 110.0,
+    },
+    {
+      id: 14,
+      tokenID: "#AHGA81",
+      date: "06/10/2022",
+      customer: "Rachel White",
+      payableAmount: 190,
+      paidAmount: 140.0,
+    },
+    {
+      id: 15,
+      tokenID: "#AHGA82",
+      date: "07/10/2022",
+      customer: "Samuel Turner",
+      payableAmount: 120,
+      paidAmount: 90.0,
+    },
+    {
+      id: 16,
+      tokenID: "#AHGA83",
+      date: "08/10/2022",
+      customer: "Tina Moore",
+      payableAmount: 100,
+      paidAmount: 40.0,
+    },
+    {
+      id: 17,
+      tokenID: "#AHGA84",
+      date: "09/10/2022",
+      customer: "Ulysses Lewis",
+      payableAmount: 220,
+      paidAmount: 180.0,
+    },
+    {
+      id: 18,
+      tokenID: "#AHGA85",
+      date: "10/10/2022",
+      customer: "Violet Smith",
+      payableAmount: 200,
+      paidAmount: 160.0,
+    },
+    {
+      id: 19,
+      tokenID: "#AHGA86",
+      date: "11/10/2022",
+      customer: "William Taylor",
+      payableAmount: 130,
+      paidAmount: 80.0,
+    },
+    {
+      id: 20,
+      tokenID: "#AHGA87",
+      date: "12/10/2022",
+      customer: "Xander Johnson",
+      payableAmount: 110,
+      paidAmount: 50.0,
+    },
   ];
 
   return (
-    <div className="desktop h-[100vh]  flex">
-      <div className="h-[100%] w-[25%] bg-red-300">Sidebar</div>
+    <div className="desktop h-[100vh]  flex ">
+      <div className="h-[100%] w-[25%] flex gap-6">
+        <Sidebar></Sidebar>
+      </div>
+
       <div className="h-[100%] w-[75%] ">
         <div className="px-8 py-16 flex gap-y-8 flex-col justify-center h-[20%] w-full ">
           <p className=" text-4xl font-semibold">My Orders</p>
-          <p className="py text-xl font-semibold text-dark-main">
+          <p className="py-2 text-xl font-semibold text-dark-main">
             Yet to be collected
           </p>
         </div>
-        <div className="h-[70%] w-full ">
-        
+        <div className="w-full flex items-center px-8">
+          <div className="h-[50%] w-[70%] flex items-start justify-start">
             <DataGrid
               rows={rows}
               columns={columns}
@@ -57,10 +208,10 @@ const ShopKeeperOrderPage = () => {
                   paginationModel: { page: 0, pageSize: 5 },
                 },
               }}
-              pageSizeOptions={[10, 15]}
+              pageSizeOptions={[5,10]}
               checkboxSelection
             />
-          
+          </div>
         </div>
       </div>
     </div>
