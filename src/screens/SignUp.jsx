@@ -9,11 +9,11 @@ const SignUp = () => {
   const navigate=useNavigate()
   useEffect(() => {
     
-    if(localStorage.getItem('authToken')){
-      navigate('/shopkeeper')
-    }else{
-      console.log("do signup")
-    }
+    // if(localStorage.getItem('authToken')){
+    //   navigate('/shopkeeper')
+    // }else{
+    //   console.log("do signup")
+    // }
   
     
   }, [])

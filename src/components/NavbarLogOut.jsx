@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import logo from "../assets/logoDark.svg";
 
 const NavbarLogOut = () => {
+  
   return (
     <div className="h-auto z-[100] w-full pt-2 ">
       <div className="flex gap-[20%] justify-center">

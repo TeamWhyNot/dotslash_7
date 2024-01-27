@@ -1,7 +1,7 @@
 import React from "react";
 import sample from "../assets/sample1.png";
 import { Button } from "./Button";
-const Details = () => {
+const Details = ({shopname,shoptype,location,description}) => {
   return (
     <div className="h-[85%]  border-2 z-[999] border-darkOrange rounded-3xl  overflow-hidden">
       <div className="detailcard  h-full  w-[32rem] py-2 bg-white ">
@@ -11,8 +11,8 @@ const Details = () => {
         <div className="h-[100%] w-[100%] flex flex-col gap-4">
           <div className="h-[10%]  flex justify-between px-8 items-center font-dark-main font-roboto">
             <div className="flex flex-col">
-              <div className=" text-3xl font-semibold ">Shop name</div>
-              <div className="text-lg font-extralight text-gray">Shop type</div>
+              <div className=" text-3xl font-semibold ">{shopname}</div>
+              <div className="text-lg font-extralight text-gray">{shoptype}</div>
             </div>
             <Button className={"px-4 py-2 rounded-lg font-semibold "}>
               + Edit details
@@ -22,13 +22,12 @@ const Details = () => {
             <div className="h-[20%]">
               <p className="text-xl font-extralight text-dark-main ">Address:</p>
               <div className="text-sm ">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem
-                ipsum dolor sit, amet consectetur adipisicing elit. 
+                {location} 
               </div>
             </div>
             <div className="h-[50%] ">
               <p className="text-xl font-extralight text-dark-main">Description:</p>
-              <div className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius dignissimos, laboriosam repudiandae molestiae consectetur quidem illo repellat! Excepturi quasi laboriosam sapiente pariatur molestias illum beatae, quibusdam quod, placeat, recusandae numquam!</div>
+              <div className="text-sm">{description}</div>
             </div>
           </div>
         </div>

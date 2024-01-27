@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import shopdet from "../assets/shopdet.svg";
 import shopLogo from "../assets/logoDark.svg";
 import { Button } from "../components/Button";
@@ -8,7 +8,18 @@ import { useNavigate } from "react-router-dom";
 import shopContext from "../context/shop/shopContext";
 
 const ShopDet = () => {
+
   const navigate = useNavigate();
+    useEffect(() => {
+        if (localStorage.getItem('shop-token')) {
+            navigate('/myshop')
+        }
+
+        
+    }, [])
+
+
+
   const { shopDetailMain, setShopDetailMain } = useContext(shopContext);
   const [shopDetail, setShopDetail] = useState({
     shopName: "",

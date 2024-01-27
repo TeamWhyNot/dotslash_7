@@ -9,40 +9,44 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem("authToken")) {
-      navigate("/shopkeeper");
-    } else {
-      console.log("Do login");
+    
+    if(localStorage.getItem('authToken')){
+        navigate('/shopDet')
+    }else{
+      console.log("Do login")
     }
-  }, []);
-
-  const { userDetail, setUserDetail, login } = useContext(authContext);
-  const [formData, setFormData] = useState({
-    name: "",
-    mobileNumber: "",
-    password: "",
-    confirmPassword: "",
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-    setUserDetail((prev) => {
-      return {
-        ...prev,
-        ...formData,
+  
+  }, [])
+  
+  const {userDetail,setUserDetail,login}=useContext(authContext);
+    const [formData, setFormData] = useState({
+        name: '',
+        mobileNumber: '',
+        password: '',
+        confirmPassword: '',
+      });
+    
+      const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+        setUserDetail((prev)=>{
+          return({
+            ...prev,
+            ...formData
+          })
+        });
       };
-    });
-  };
+    
+      const handleLogin = async () => {
+        
+        await login();
+        navigate('/shopDet')
 
-  const handleLogin = async () => {
-    await login();
-    navigate("/shopkeeper");
-  };
-
+      };
+    
   return (
     <div>
       <div className="desk">
