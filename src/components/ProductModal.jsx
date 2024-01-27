@@ -44,11 +44,31 @@ const ProductModal = ({
 
   const onSubmit = () => {
     console.log(formData);
-    setProductData((prevProductData) => [...prevProductData, formData]);
-    
-    console.log(productData);
 
-    
+
+    setProductData((prevProductData) => {
+      const updatedProductData = prevProductData.map((product) => {
+      
+        if (
+          product.productName === formData.productName
+          //BUG: CHANGE THIS WITH PRODUCT ID INSTEAD OF NAME
+        ) {
+      
+          return {
+            ...product,
+            productPrice: formData.productPrice,
+            productType: formData.productType,
+            productInStock: formData.productInStock,
+            productQuantity: formData.productQuantity,
+          };
+        }
+        return product; 
+      });
+
+      return updatedProductData;
+    });
+
+    console.log(productData);
   };
 
   const openModal = () => {
@@ -190,7 +210,7 @@ const ProductModal = ({
                       accept="image/*"
                       onChange={handleImageChange}
                       name="imgUrl"
-                    //   value={formData.imgurl} TODO:
+                      //   value={formData.imgurl} TODO:
                     />
                   </div>
                 </div>
