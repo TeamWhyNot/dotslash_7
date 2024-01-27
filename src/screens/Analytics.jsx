@@ -9,6 +9,7 @@ import moneyicon from "../assets/moneyicon.svg";
 import totalcustomericon from "../assets/totalcustomericon.svg";
 import Coupon from "../components/Coupon";
 import LineChartRevenue from "../components/LineChartJs";
+import Sidebar from "../components/Sidebar";
 
 const Analytics = () => {
 
@@ -33,9 +34,13 @@ const Analytics = () => {
   }, []); //initialize
 
   return (
-    <div>
+    
+      <div className="desktop  h-[100vh] w-full">
+      <div className="flex gap-6">
+      <Sidebar></Sidebar>
+      <div className="flex"></div>
       <div className="desk deskLogin h-[100vh]">
-        <NavbarLogOut />
+      
         <div className="h-[80%] w-full flex justify-center items-center mt-14">
           <div className="h-full w-[100vw] px-10 flex">
             <div
@@ -156,8 +161,9 @@ const Analytics = () => {
             </div>
           </div>
         </div>
-      </div>
+     </div>
     </div>
+    /</div>
   );
 };
 

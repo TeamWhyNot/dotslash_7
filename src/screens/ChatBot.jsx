@@ -93,13 +93,13 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="desktop h-[100vh] w-full">
+    <div className="desktop  h-[100vh] w-full">
       <div className="flex gap-6">
       <Sidebar></Sidebar>
       <div className="flex">
         
       </div>
-      <div className="w-full flex flex-col items-center gap-4 justify-center ">
+      <div className="w-full fade  flex flex-col items-center gap-4 justify-center ">
         <div >
           <h1 className="text-3xl font-extrabold">🤖 Chatbot 🤖</h1>
         </div>
@@ -121,7 +121,7 @@ const ChatBot = () => {
                         alt="Sender"
                       ></img>
                       <div
-                        className="text-lg rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-start bg-operator-message-bg text-black"
+                        className="text-lg fade rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-start bg-operator-message-bg text-black"
                         style={{ borderTopLeftRadius: 0 }}
                       >
                         {msg.message}
@@ -131,7 +131,7 @@ const ChatBot = () => {
                 } else if (msg.isSender) {
                   return (
                     <div
-                      className="text-lg rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-end bg-darkOrange text-white  "
+                      className="text-lg fade rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-end bg-darkOrange text-white  "
                       style={{ borderTopRightRadius: 0 }}
                     >
                       {msg.message}
