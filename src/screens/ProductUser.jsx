@@ -3,6 +3,7 @@ import kurta from "../assets/mobile/kurtagirl.svg"
 import Button from "../components/Button"
 import { NewButton } from '../components/NewButton'
 import GenCard from '../components/GenCard'
+import NavbarMo from '../components/NavbarMo'
 
 const ProductUser = () => {
   return (
@@ -43,12 +44,12 @@ const ProductUser = () => {
         </div>
         <div className=" z-20  bg-slate-400 ">
             <div className="buttons p-4 bg-white fixed bottom-0 w-full flex items-center justify-center  gap-3">
-                <NewButton className=' bg-transparent border-2 border-darkOrange rounded h-[2.5rem] w-[50%]   '>Add to Cart</NewButton>
-                <NewButton  className=' bg-darkOrange rounded h-[2.5rem] w-[50%]   '>Click & Collect</NewButton>
                 
+                <NewButton  className=' bg-darkOrange rounded h-[2.5rem] w-[100%]   '>Add to bag</NewButton>
 
             </div>
             </div>
+        
 
     </div>
   )
