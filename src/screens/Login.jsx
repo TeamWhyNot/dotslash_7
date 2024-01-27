@@ -12,7 +12,7 @@ const Login = () => {
   useEffect(() => {
     
     if(localStorage.getItem('authToken')){
-        navigate('/shopkeeper')
+        navigate('/shopDet')
     }else{
       console.log("Do login")
     }
@@ -44,7 +44,7 @@ const Login = () => {
       const handleLogin = async () => {
         
         await login();
-        navigate('/shopkeeper')
+        navigate('/shopDet')
 
       };
     

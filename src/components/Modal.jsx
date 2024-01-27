@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Button } from "../components/Button";
 import authContext from "../context/authContext";
+import shopContext from "../context/shop/shopContext";
 
 const Modal = ({ onOpen, onClose, children, onClick, name, className }) => {
   const [showModal, setShowModal] = useState(false);
   const [productImage, setProductImage] = useState(null);
 
-  const { productData, setProductData } = useContext(authContext);
+  const { productData, setProductData } = useContext(shopContext);
 
   const [formData, setFormData] = useState({
     imgurl: require("../assets/sample1.png"),

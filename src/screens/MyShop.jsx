@@ -1,13 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NavbarLogOut from "../components/NavbarLogOut";
 import ProductCard from "../components/ProductCard";
 import Details from "../components/Details";
 import { Button } from "../components/Button";
 import Modal from "../components/Modal";
 import authContext from "../context/authContext";
+import shopContext from "../context/shop/shopContext";
 
 const MyShop = ({ onClick }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const { getShop, shop, getProduct, productData } = useContext(shopContext)
   const openModal = () => {
     setModalOpen(true);
   };
@@ -15,6 +17,19 @@ const MyShop = ({ onClick }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  // const shopit= async()=>{
+  //   await getShop()
+  // }
+  useEffect(() => {
+
+    getShop()
+    getProduct()
+
+  }, [])
+  console.log(productData)
+
+
 
   //REMOVE THIS LATER TODO:
   // const [productData, setProductData] = useState([
@@ -59,7 +74,7 @@ const MyShop = ({ onClick }) => {
   //     productPrice: 900,
   //   },
   // ]);
-  const { productData } = useContext(authContext);
+
 
   // const handleAddProduct = (addedProduct) => {
   //   setProductData((prevProductData) => [...prevProductData, addedProduct]);
@@ -71,11 +86,16 @@ const MyShop = ({ onClick }) => {
       <NavbarLogOut />
       <div className="mainShopDet grid grid-cols-2  gap-3">
         <div className="detailCard flex justify-center items-center h-[90vh] w-[90%] border-r-2 border-black ">
-          <Details />
+          <Details
+            shopname={shop.shopName}
+            shoptype={shop.category}
+            location={shop.location}
+            description={shop.description}
+          />
         </div>
         <div className="h-[80vh] w-[90%] flex items-center justify-center flex-col gap-y-6 mt-10">
           <ProductCard
-        
+
             onClick={() => {
               console.log("editing product, not implemented yet");
             }}
@@ -85,7 +105,7 @@ const MyShop = ({ onClick }) => {
               name="+ Add Product"
               onOpen={openModal}
               onClose={closeModal}
-              // onAddProduct={handleAddProduct}
+            // onAddProduct={handleAddProduct}
             ></Modal>
           </div>
         </div>

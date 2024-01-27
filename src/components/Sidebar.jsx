@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import shopLogo from '../assets/logoLight.png';
 import dashboard from '../assets/home 2.svg';
 import orders from '../assets/Order.svg';
 import myShop from '../assets/Vector.svg';
 import robo from '../assets/Robo Advisor.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from './Button';
 
 const Sidebar = () => {
@@ -15,6 +15,19 @@ const Sidebar = () => {
         {image: robo, imgclass: 'robo', alt:'ChatBot', link: '/chatbot'}
         
     ];
+    const navigate=useNavigate();
+    const handleLogout=()=>{
+        localStorage.removeItem('authToken')
+        window.location.reload();
+
+    }
+    useEffect(() => {
+      if(!localStorage.getItem('authToken')){
+        navigate('/login')
+      }
+      
+    }, [localStorage.getItem("authToken")])
+    
 
     return (
         <div>
@@ -41,7 +54,7 @@ const Sidebar = () => {
                                 </Link>
                             ))}
                         </div>
-                        <Button className='h-[2.5rem] w-[6rem]'>Logout</Button>
+                        <Button onClick={handleLogout} className='h-[2.5rem] w-[6rem]'>Logout</Button>
                     </div>
                 </div>
             </div>

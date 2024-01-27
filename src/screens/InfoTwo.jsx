@@ -5,8 +5,10 @@ import { Button } from '../components/Button'
 import arrow from "../assets/arrow.svg"
 import authContext from '../context/authContext'
 import shopContext from '../context/shop/shopContext'
+import { useNavigate } from 'react-router-dom'
 
 const InfoTwo = () => {
+    const navigate=useNavigate()
     const {shopDetailMain,setShopDetailMain,addShop}=useContext(shopContext)
     const [bankDetail, setBankDetail] = useState({
         licenceNum:0,
@@ -34,6 +36,7 @@ const InfoTwo = () => {
         e.preventDefault();
         await addShop()
         console.log(shopDetailMain)
+        navigate('/myshop')
 
     }
     return (
