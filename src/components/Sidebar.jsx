@@ -19,8 +19,8 @@ const Sidebar = () => {
     return (
         <div>
             <div className="desktop">
-                <div className='h-[100vh] w-[20rem] bg-yellow-300 flex  justify-center'>
-                    <div className="mainBar flex flex-col items-center h-[100vh] gap-[3rem] w-[15rem] bg-white">
+                <div className=' side h-[100vh] w-[20rem] flex  justify-center '>
+                    <div className="mainBar flex flex-col items-center h-[100vh] gap-[3rem] w-[15rem] bg-transparent">
                         <div className="logo mt-4 flex gap-2  items-center">
                             <div>
                                 <img className='h-[50px] w-[50px]' src={shopLogo} alt="" srcSet="" />
