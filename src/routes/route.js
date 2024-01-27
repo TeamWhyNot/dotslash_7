@@ -14,6 +14,7 @@ import Test from "../screens/Test";
 import ChatBot from "../screens/ChatBot";
 import Orders from "../screens/Orders";
 import UserHome from "../screens/UserHome";
+import UserBags from "../screens/UserBags";
 
 const routes = [
   {
@@ -71,6 +72,10 @@ const routes = [
   {
     path: "/userhome",
     element:<UserHome/>,
+  },
+  {
+    path: "/userbag",
+    element:<UserBags/>,
   },
 ];
 
