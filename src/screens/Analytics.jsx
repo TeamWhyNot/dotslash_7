@@ -155,8 +155,8 @@ const Analytics = () => {
                   />
                 </div>
 
-                <SquareCard className={"h-[100%] bg-red-500 flex items-center justify-center pt-4"}>
-                  <img src={require('../assets/piechart.png')} className="h-[100%] w-[80%]"></img>
+                <SquareCard className={"h-[100%] bg-red-500 flex items-center justify-center pt-10"}>
+                  <img src={require('../assets/piechart.png')} className="h-[250px] w-[80%]"></img>
                 </SquareCard>
               </div>
             </div>

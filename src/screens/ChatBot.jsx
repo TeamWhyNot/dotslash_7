@@ -91,6 +91,7 @@ const ChatBot = () => {
 
   return (
     <div className="desktop h-[100vh] w-full">
+      <NavbarLogOut></NavbarLogOut>
       <div className="flex gap-6 h-[90%]">
         <div className="w-full flex flex-col items-center gap-4 justify-center ">
           <div>

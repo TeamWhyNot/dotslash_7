@@ -11,7 +11,7 @@ const NavbarLogOut = () => {
         <div className="logo flex gap-2 items-center  ">
           <img src={logo} alt="" />
           <Link to="/">
-            <h1 className=" font-semibold text-2xl ">Shoppify</h1>
+            <h1 className=" font-semibold text-2xl ">ShopRush</h1>
           </Link>
         </div>
         <div className="flex items-center font-medium justify-between w-[30%] text-black text-lg gap-x-5 font-inter ">
