@@ -11,12 +11,17 @@ import Coupon from "../components/Coupon";
 import LineChartRevenue from "../components/LineChartJs";
 
 const Analytics = () => {
-
   const chartDataByYear = {
     2022: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
     2023: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
     2024: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
   }; //total revenue
+
+  const chartDataByYearPredicted = {
+    2022: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
+    2023: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
+    2024: Array.from({ length: 12 }, () => Math.floor(Math.random() * 100)),
+  };
 
   const chartData2 = [
     1000, 200, 30000, 4000, 4444, 2222, 6666, 8888, 100000, 6666, 44444, 66666,
@@ -76,6 +81,12 @@ const Analytics = () => {
                         >
                           2024
                         </option>
+                        <option
+                          value="2024"
+                          className="bg-darkOrange text-white"
+                        >
+                          2025
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -83,12 +94,17 @@ const Analytics = () => {
                     <div className="w-full h-[70%] ">
                       <LineChartRevenue
                         chartData={chartDataByYear[selectedYear]}
+                        chartDataByYearPredicted={
+                          chartDataByYearPredicted[selectedYear]
+                        }
                         max={150}
                       ></LineChartRevenue>
                     </div>
                   )}
                 </ChartCard>
-                <SquareCard className={"px-6 flex flex-col items-center gap-y-4  "}>
+                <SquareCard
+                  className={"px-6 flex flex-col items-center gap-y-4  "}
+                >
                   <div className="h-[30%] w-full pt-8 font-roboto font-medium text-xl text-black  ">
                     Traffic Sources
                   </div>
@@ -137,8 +153,8 @@ const Analytics = () => {
                   />
                 </div>
 
-                <SquareCard className={'h-[100%] bg-red-500'}>
-                 <p>hello</p>
+                <SquareCard className={"h-[100%] bg-red-500"}>
+                  <p>hello</p>
                 </SquareCard>
               </div>
             </div>
