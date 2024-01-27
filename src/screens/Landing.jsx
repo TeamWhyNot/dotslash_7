@@ -99,7 +99,7 @@ const Landing = () => {
 
 
     <div className="desk">
-    <div className=" deskLanding h-[100vh] bg-no-repeat bg-cover">
+    <div className="fade deskLanding h-[100vh] bg-no-repeat bg-cover">
         <Navbar />
         <div className=' flex flex-col  gap-8 w-[55%] ml-[10%] mt-[5%]  '>
           <h1 className=' text-[3rem] font-bold'>Make it simpler!</h1>
