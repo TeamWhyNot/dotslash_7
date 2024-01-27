@@ -28,7 +28,7 @@ const Category = () => {
   return (
     <div>
       <div className="desk">
-      <div className="desktop deskCategory h-[100vh]">
+      <div className="desktop fade deskCategory h-[100vh]">
         <Navbar />
         <div className='flex flex-col mt-12 items-center gap-24'>
           <h1 className=' font-semibold text-4xl'>Choose a category</h1>

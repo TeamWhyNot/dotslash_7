@@ -6,7 +6,7 @@ import Category from "../screens/Category";
 import PageNotFound from "../screens/PageNotFound";
 import Analytics from "../screens/Analytics";
 import ShopDet from "../screens/ShopDet";
-
+import ProductUser from "../screens/ProductUser";
 import Option from "../screens/Option";
 import InfoTwo from "../screens/InfoTwo";
 import MyShop from "../screens/MyShop";
@@ -32,6 +32,10 @@ const routes = [
   {
     path: "/category",
     element: <Category />,
+  },
+  {
+    path: '/productsUser',
+    element: <ProductUser />,
   },
   {
     path: "/analytics",

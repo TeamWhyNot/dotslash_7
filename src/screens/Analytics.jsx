@@ -43,7 +43,7 @@ const Analytics = () => {
       <div className="desktop  h-[100vh] w-full">
       <div className="flex gap-6">
       <Sidebar></Sidebar>
-      <div className="flex"></div>
+      <div className="flex">
       <div className="desk deskLogin h-[100vh]">
       
         <div className="h-[80%] w-full flex justify-center items-center mt-14">
@@ -179,7 +179,8 @@ const Analytics = () => {
         </div>
      </div>
     </div>
-    /</div>
+    </div>
+    </div>
   );
 };
 

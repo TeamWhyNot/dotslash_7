@@ -5,6 +5,7 @@ import Details from "../components/Details";
 import { Button } from "../components/Button";
 import Modal from "../components/Modal";
 import authContext from "../context/authContext";
+import Sidebar from "../components/Sidebar";
 
 const MyShop = ({ onClick }) => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -68,8 +69,10 @@ const MyShop = ({ onClick }) => {
 
   return (
     <div className="desktop h-[100vh]">
-      <NavbarLogOut />
-      <div className="mainShopDet grid grid-cols-2  gap-3">
+       <div className="flex gap-6">
+       <Sidebar/>
+      <div className="flex justify-center items-center  w-full ">
+      <div className="mainShopDet grid grid-cols-2 w-full gap-3">
         <div className="detailCard flex justify-center items-center h-[90vh] w-[90%] border-r-2 border-black ">
           <Details />
         </div>
@@ -89,8 +92,11 @@ const MyShop = ({ onClick }) => {
             ></Modal>
           </div>
         </div>
+        </div>
+
       </div>
-    </div>
+        </div>
+        </div>
   );
 };
 
