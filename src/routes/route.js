@@ -12,7 +12,7 @@ import InfoTwo from "../screens/InfoTwo";
 import MyShop from "../screens/MyShop";
 import Test from "../screens/Test";
 import ChatBot from "../screens/ChatBot";
-import Orders from "../screens/Orders";
+
 import UserHome from "../screens/UserHome";
 import ShopKeeperOrderPage from "../screens/ShopKeeperOrderPage";
 import UserBags from "../screens/UserBags";
@@ -68,26 +68,21 @@ const routes = [
     element: <Test />,
   },
   {
-    path: "/orders",
-    element: <Orders />,
-  },
-  {
     path: "/userhome",
-    element:<UserHome/>,
+    element: <UserHome />,
   },
   {
     path: "/shopkeeperorderpage",
-    element:<ShopKeeperOrderPage/>,
+    element: <ShopKeeperOrderPage />,
   },
   {
     path: "/userbag",
-    element:<UserBags/>,
+    element: <UserBags />,
   },
   {
     path: "/userorder",
-    element:<UserOrder/>,
+    element: <UserOrder />,
   },
-  
 ];
 
 export default routes;

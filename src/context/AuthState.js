@@ -12,6 +12,35 @@ const AuthState = (props) => {
   const [userDetail, setUserDetail] = useState({});
   
 
+  const [bag, setBag] = useState([
+    {
+      orderToken: "#ADADX1",
+      orderItemName: "Kurta",
+      orderCategory: "Clothes",
+      orderPrice: 500,
+      onGoing: false,
+      orderDate: "24/01/2024, 08:00pm",
+    },
+    {
+      orderToken: "#ADADX2",
+      orderItemName: "Kurta2",
+      orderCategory: "Ethnic",
+      orderPrice: 5000,
+      onGoing: false,
+      orderDate: "20/01/2024, 04:00pm",
+    },
+    {
+      orderToken: "#ADADX3",
+      orderItemName: "Kurta3",
+      orderCategory: "Marriage",
+      orderPrice: 500,
+      onGoing: true,
+      orderDate: "30/01/2024, 02:00pm",
+    },
+  ]);
+
+  const [orders, setOrders] = useState([]);
+
   const createUser = async () => {
     const response = await fetch("http://localhost:5000/api/auth/createuser", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -53,9 +82,7 @@ const AuthState = (props) => {
     localStorage.setItem("authToken", data.token);
   };
 
-  const verify = () => {
-
-  }
+  const verify = () => {};
   return (
     <authContext.Provider
       value={{
@@ -65,7 +92,11 @@ const AuthState = (props) => {
         login,
         createUser,
         setUid,
-       
+        
+        bag,
+        setBag,
+        orders,
+        setOrders,
       }}
     >
       {props.children}

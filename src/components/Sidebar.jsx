@@ -11,7 +11,7 @@ const Sidebar = () => {
     const items = [
         { image: dashboard, imgclass: 'dash', alt: 'Dashboard', link: '/analytics' },
         { image: myShop, imgclass: 'my-shop', alt: 'My shop', link: '/myshop' },
-        { image: orders, imgclass: 'order', alt: 'Orders', link: '/myshop' },
+        { image: orders, imgclass: 'order', alt: 'Orders', link: '/shopkeeperorderpage' },
         {image: robo, imgclass: 'robo', alt:'ChatBot', link: '/chatbot'}
         
     ];
@@ -39,7 +39,7 @@ const Sidebar = () => {
                                 <img className='h-[50px] w-[50px]' src={shopLogo} alt="" srcSet="" />
                             </div>
                             <div className=' font-semibold text-2xl'>
-                                Shoppify
+                                ShopRush
                             </div>
                         </div>
                         <div className="items flex flex-col gap-11 ">

@@ -78,7 +78,7 @@ const Landing = () => {
      <div className="mob flex flex-col justify-center items-center  h-[100vh]">
         <div className="flex flex-col mt-[50%] gap-6">
         <img src={logo} alt=""  />
-        <h1 className='text-center font-bold text-4xl text-dorange '>Shoppify</h1>
+        <h1 className='text-center font-bold text-4xl text-dorange '>ShopRush</h1>
         </div>
         <div className=' h-[20rem] w-full flex flex-col items-center justify-center gap-6 '>
         
