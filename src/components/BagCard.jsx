@@ -4,7 +4,7 @@ import { Button } from './Button'
 
 const BagCard = () => {
     return (
-        <div className=' border-t-2 p-2 w-[100%]  '>
+        <div className=' border-t-[0.001rem] p-2 w-[100%]  '>
             <div className=' gap-2 flex items-center '>
                 <div>
                     <img src={kurta}></img>
@@ -17,7 +17,7 @@ const BagCard = () => {
                         <h1 className='text-sm'>Fancy</h1>
                     </div>
                     <div>
-                        <h1>Rs 2300</h1>
+                        <h1 className=' text-darkOrange'>Rs 2300</h1>
                     </div>
                     <div>
                         <Button className=" p-2 w-fit  rounded-full text-white ">Click and Collect</Button>
