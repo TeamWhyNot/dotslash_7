@@ -1,5 +1,6 @@
 var jwt = require('jsonwebtoken');
 require("dotenv").config();
+
 const jwt_shop = "toyash#123";
 
 const fetchShop = (req, res, next) => {
