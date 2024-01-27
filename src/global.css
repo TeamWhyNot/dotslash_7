@@ -114,6 +114,12 @@
     grid-column: 1/span2 ;
   }
 
+
+  /* -----sidebar---- */
+  .side{
+    box-shadow: 5px 0px 20px 0px rgba(125, 125, 125, 0.25);
+  }
+
   /* ---MediaQuery----*/
   @media  (min-width: 768px) {
     .mob {

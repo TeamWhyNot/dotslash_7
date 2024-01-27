@@ -3,24 +3,87 @@ import NavbarLogOut from "../components/NavbarLogOut";
 import chatboticon from "../assets/chatbot.svg";
 import chatboticon2 from "../assets/chatbot2.svg";
 import send from "../assets/send.svg";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import Sidebar from '../components/Sidebar';
 
 const ChatBot = () => {
   const [inputValue, setInputValue] = useState("");
 
+  const handleClick = async () => {
+    const genAI = new GoogleGenerativeAI("AIzaSyA5pe423GwkXbEUI2v7Nr7yBbDnqgAZ2Qg");
+    const generationConfig = {
+      temperature: 0.9,
+      topK: 1,
+      topP: 1,
+      maxOutputTokens: 2048,
+    };
+
+    // ...
+
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const parts = [
+      { text: "how should one behave in front of parents give answer in 100 words" },
+    ];
+
+    const result = await model.generateContent({
+
+      contents: [{ role: "user", parts }],
+      generationConfig,
+
+    });
+
+    const response = result.response;
+    console.log(response.text());
+
+
+
+  }
+
   const [messages, setMessages] = useState([
     { message: "Hello! How can I help you?", isSender: false },
-    { message: "Hi there! I have a question.", isSender: true },
+    
     // Add more messages as needed
   ]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(inputValue);
     const msg = {
       message: inputValue,
       isSender: true,
     };
+    const genAI = new GoogleGenerativeAI("AIzaSyA5pe423GwkXbEUI2v7Nr7yBbDnqgAZ2Qg");
+    const generationConfig = {
+      temperature: 0.9,
+      topK: 1,
+      topP: 1,
+      maxOutputTokens: 2048,
+    };
+
+    // ...
+
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const parts = [
+      { text: inputValue },
+    ];
     setMessages((prevMessages) => [...prevMessages, msg]);
+
+    setInputValue("");
+
+    const result = await model.generateContent({
+
+      contents: [{ role: "user", parts }],
+      generationConfig,
+
+    });
+
+    const response = result.response;
+    console.log(response.text());
+    const msg2 = {
+      message: response.text(),
+      isSender: false,
+    };
+    setMessages((prevMessages) => [...prevMessages, msg2]);
 
     setInputValue("");
   };
@@ -31,11 +94,18 @@ const ChatBot = () => {
 
   return (
     <div className="desktop h-[100vh] w-full">
-      <NavbarLogOut></NavbarLogOut>
-      <div className="w-full h-[90%] flex items-center justify-center">
-        <div className="bg-gainsboro h-[70%] w-[60%] rounded-2xl  overflow-hidden ">
+      <div className="flex gap-6">
+      <Sidebar></Sidebar>
+      <div className="flex">
+        
+      </div>
+      <div className="w-full flex flex-col items-center gap-4 justify-center ">
+        <div >
+          <h1 className="text-3xl font-extrabold">🤖 Chatbot 🤖</h1>
+        </div>
+        <div className="bg-gainsboro h-[75%] w-[72%] rounded-2xl  overflow-hidden ">
           <div className="h-[80%] w-full flex flex-col justify-center items-center ">
-            <div className="w-[90%] h-[90%] flex flex-col font-inter gap-y-2 overflow-y-auto scrollbar-hidden px-4">
+            <div className="w-[90%] h-[90%] flex flex-col font-inter gap-y-2 overflow-y-auto scrollbar-hidden ">
               {/*This is from receiver  */}
 
               {messages.map((msg, index) => {
@@ -51,7 +121,7 @@ const ChatBot = () => {
                         alt="Sender"
                       ></img>
                       <div
-                        className="text-xl rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-start bg-operator-message-bg text-black"
+                        className="text-lg rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-start bg-operator-message-bg text-black"
                         style={{ borderTopLeftRadius: 0 }}
                       >
                         {msg.message}
@@ -61,7 +131,7 @@ const ChatBot = () => {
                 } else if (msg.isSender) {
                   return (
                     <div
-                      className="text-xl rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-end bg-darkOrange text-white  "
+                      className="text-lg rounded-3xl h-fit max-w-[45%] flex items-start justify-start px-8 py-2.5 break-words self-end bg-darkOrange text-white  "
                       style={{ borderTopRightRadius: 0 }}
                     >
                       {msg.message}
@@ -116,6 +186,8 @@ const ChatBot = () => {
           </form>
         </div>
       </div>
+      </div>
+     
     </div>
   );
 };
