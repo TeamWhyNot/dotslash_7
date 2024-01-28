@@ -93,7 +93,7 @@ const Login = () => {
       </div>
 
       <div className="mob">
-        <div className="mobile mobSignup h-[100vh]">
+        <div className="mobile fade mobSignup h-[100vh]">
           <div className="flex w-full">
             <div className="flex flex-col h-auto w-full ">
               <div className="flex flex-col mt-[25%] p-5">
