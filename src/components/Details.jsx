@@ -1,12 +1,12 @@
 import React from "react";
 import sample from "../assets/sample1.png";
 import { Button } from "./Button";
-const Details = ({shopname,shoptype,location,description}) => {
+const Details = ({ shopname, shoptype, location, description }) => {
   return (
     <div className="h-[85%] shadow-lg drop-shadow-lg  border-2 z-[999] border-darkOrange rounded-3xl  overflow-hidden">
       <div className="detailcard  h-full  w-[32rem] py-2 bg-white ">
         <div className="image p-2 h-[45%] ">
-          <img className="w-full px-4 " src={sample} alt="" srcset="" />
+          <img className="w-full px-4 h-[250px] " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRNTyXnEtPjvXvm9HlxYWm4LUGKGUcsKs0Q&usqp=CAU" alt="" srcset="" />
         </div>
         <div className="h-[100%] w-[100%] flex flex-col gap-4">
           <div className="h-[10%]  flex justify-between px-8 items-center font-dark-main font-roboto">
@@ -22,7 +22,7 @@ const Details = ({shopname,shoptype,location,description}) => {
             <div className="h-[20%]">
               <p className="text-xl font-extralight text-dark-main ">Address:</p>
               <div className="text-sm ">
-                {location} 
+                {location}
               </div>
             </div>
             <div className="h-[50%] ">
