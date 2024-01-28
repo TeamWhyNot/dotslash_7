@@ -36,7 +36,7 @@ const routes = [
     element: <Category />,
   },
   {
-    path: '/productsUser',
+    path: "/productsUser",
     element: <ProductUser />,
   },
   {
@@ -86,6 +86,10 @@ const routes = [
   {
     path: "/userorder",
     element: <UserOrder />,
+  },
+  {
+    path: "/productuser",
+    element: <ProductUser />,
   },
 ];
 
