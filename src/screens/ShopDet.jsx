@@ -50,7 +50,7 @@ const ShopDet = () => {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] flex items-center justify-start overflow-hidden">
+    <div className="h-[100vh] fade w-[100vw] flex items-center justify-start overflow-hidden">
       <div className="h-[100vh] w-[60%] flex flex-col bg-darkOrange  ">
         <img className="" src={shopdet}></img>
        
