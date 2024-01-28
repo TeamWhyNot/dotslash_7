@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex gap-[50%] justify-center">
         <div className="logo flex gap-2 items-center  ">
             <img src={logo} alt="" /> 
-            <Link to='/'><h1 className=' font-semibold text-2xl '>Shoppify</h1></Link>
+            <Link to='/'><h1 className=' font-semibold text-2xl '>shopRush</h1></Link>
             </div>
             <div className='flex gap-5 justify-center items-center'>
                 <Link to="/login"><h1 className=' text-lg font-semibold'>Login</h1></Link>

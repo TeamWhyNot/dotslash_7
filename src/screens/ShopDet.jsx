@@ -63,7 +63,7 @@ const ShopDet = () => {
                         <img src={shopLogo}></img>
                     </div>
                     <div>
-                        <h1 className='font-semibold text-2xl'>Shoppify</h1>
+                        <h1 className='font-semibold text-2xl'>shopRush</h1>
                     </div>
                 </div>
                 <div>

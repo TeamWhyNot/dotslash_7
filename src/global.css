@@ -1,139 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
- * {
-   font-family: 'Raleway', sans-serif;
- }
+* {
+  font-family: 'Raleway', sans-serif;
+}
 
- .desktop {
-   background-image: url(./assets/Admin_Login.png);
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+.desktop {
+  background-image: url(./assets/Admin_Login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
- .mobile {
-   background-image: url('./assets//bgSmall.png');
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+.mobile {
+  background-image: url('./assets//bgSmall.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
- button:hover {
-   transform: scale(1.025);
+button:hover {
+  transform: scale(1.025);
 
- }
-
-
- /* ---------landing---------------- */
- .join {
-   border: 2px solid #FF9800;
-   color: #FF9800;
-   font-size: 1.2rem;
-   font-weight: 500;
- }
-
- .deskLanding {
-   background-image: url(./assets/bgLanding.png);
- }
+}
 
 
- /* ------------login------------------ */
+/* ---------landing---------------- */
+.join {
+  border: 2px solid #FF9800;
+  color: #FF9800;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
- .container {
+.deskLanding {
+  background-image: url(./assets/bgLanding.png);
+}
 
-   display: grid;
-   grid-template-columns: 50% 50%;
- }
 
- input[type=text]:focus,
- input[type=password]:focus {
-   outline: 2px solid;
-   color: #000000;
-   background-color: #cdcdcd;
- }
+/* ------------login------------------ */
 
- .logincard {
-   border: 3px solid #FFBF62;
+.container {
 
- }
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 
- /*=======Categoryyy=======*/
- .categ {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
- }
+input[type=text]:focus,
+input[type=password]:focus {
+  outline: 2px solid;
+  color: #000000;
+  background-color: #cdcdcd;
+}
 
- .j {
-   grid-column: 1 / span 2;
- }
+.logincard {
+  border: 3px solid #FFBF62;
+
+}
+
+/*=======Categoryyy=======*/
+.categ {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.j {
+  grid-column: 1 / span 2;
+}
 
 
 
 /* ------------Analytics------------------ */
-.coupon{
-    background-image: url('./assets/coupon.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 90%; /* You can adjust the percentage */
-    background-position: center center; 
-  
+.coupon {
+  background-image: url('./assets/coupon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 90%;
+  /* You can adjust the percentage */
+  background-position: center center;
+
 }
 
- .scrollbar-hidden::-webkit-scrollbar {
-   width: 6px;
-   /* Set the width of the scrollbar */
- }
-
- .scrollbar-hidden::-webkit-scrollbar-thumb {
-   background-color: #FF9800;
-   /* Set the color of the thumb (the draggable part) */
-   border-radius: 8px;
-   /* Set the border-radius for rounded edges */
- }
-
- .scrollbar-hidden::-webkit-scrollbar-track {
-   background-color: transparent;
-   /* Set the color of the track (the non-draggable part) */
- }
-
-
-
-  /* -------options----- */
-  .options{
-    grid-column: 1/span2 ;
-  }
-
-
-
-  /* -------options----- */
-  .options{
-    grid-column: 1/span2 ;
-  }
-
-
-  /* -----sidebar---- */
-  .side{
-    box-shadow: 5px 0px 20px 0px rgba(125, 125, 125, 0.25);
-  }
-
-  /* ---MediaQuery----*/
-  @media  (min-width: 768px) {
-    .mob {
-      display: none; 
-    }
-}
-@media  (max-width: 768px) {
-    .desk{
-      display: none; 
-    }
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 6px;
+  /* Set the width of the scrollbar */
 }
 
-.mobile_navbar{
-  box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.8);
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  background-color: #FF9800;
+  /* Set the color of the thumb (the draggable part) */
+  border-radius: 8px;
+  /* Set the border-radius for rounded edges */
+}
+
+.scrollbar-hidden::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Set the color of the track (the non-draggable part) */
+}
+
+
+
+/* -------options----- */
+.options {
+  grid-column: 1/span2;
+}
+
+
+
+/* -------options----- */
+.options {
+  grid-column: 1/span2;
+}
+
+
+/* -----sidebar---- */
+.side {
+  box-shadow: 5px 0px 20px 0px rgba(125, 125, 125, 0.25);
+}
+
+/* ---MediaQuery----*/
+@media (min-width: 768px) {
+  .mob {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desk {
+    display: none;
+  }
+}
+
+.mobile_navbar {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -145,6 +147,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -152,5 +155,29 @@
 }
 
 .fade {
-  animation: fadeInDown 1s ease-out; /* Adjust the animation duration and easing as needed */
+  animation: fadeInDown 1s ease-out;
+  /* Adjust the animation duration and easing as needed */
+}
+
+.custom-loader {
+  --d: 22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #FF9800;
+  box-shadow:
+    calc(1*var(--d)) calc(0*var(--d)) 0 0,
+    calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d)) calc(1*var(--d)) 0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d)) calc(0*var(--d)) 0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d)) calc(-1*var(--d)) 0 6px;
+  animation: s7 0.5s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {
+    transform: rotate(1turn)
+  }
 }

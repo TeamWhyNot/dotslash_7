@@ -7,7 +7,7 @@ const Header = () => {
     <div className="h-[10%] w-full flex items-center justify-around p-4">
       <img src={logoDark} className="h-full w-[20%] "></img>
       <div className="h-full w-[60%] flex items-center font-semibold text-2xl">
-        Shoppify
+        shopRush
       </div>
       <div className="h-full w-[16%] bg-ghostwhite rounded-full flex items-center justify-center">
         <img src={bag} className="h-8"></img>

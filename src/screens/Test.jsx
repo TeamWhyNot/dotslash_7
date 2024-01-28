@@ -2,6 +2,7 @@ import React from 'react'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { AudioRecorder } from 'react-audio-voice-recorder';
 import NavbarMo from '../components/NavbarMo';
+import Loader from '../components/Loader';
 
 const Test = () => {
 
@@ -72,7 +73,7 @@ const Test = () => {
         //     <br />
         // </div>
         <div>
-            <NavbarMo/>
+            <Loader/>
         </div>
     )
 }

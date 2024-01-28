@@ -46,7 +46,7 @@ const ProductEditCard = ({
   };
 
   return (
-    <div className="h-[35%] w-[25%] border-darkOrange border-2 rounded-lg flex flex-col justify-center">
+    <div className="h-[35%] w-[25%]  border-darkOrange border-2 rounded-lg flex flex-col justify-center">
       <div className="m-2 border-darkOrange border-2 rounded-lg h-[50%]">
         <img src={imgurl} className="h-[100%]" alt="Product" />
       </div>
