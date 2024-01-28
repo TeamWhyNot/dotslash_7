@@ -89,7 +89,7 @@ const MyShop = ({ onClick }) => {
   // };
 
   return (
-    <div className="desktop h-[100vh]">
+    <div className="desktop fade h-[100vh]">
       <NavbarLogOut />
       <div className="mainShopDet grid grid-cols-2  gap-3">
         <div className="detailCard  flex justify-center items-center h-[90vh] w-[90%] border-r-2 border-black ">

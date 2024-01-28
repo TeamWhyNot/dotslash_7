@@ -7,6 +7,7 @@ const AuthState = (props) => {
   const [Uid, setUid] = useState("");
   const [userDetail, setUserDetail] = useState({});
   const [isCoupon, setIsCoupon] = useState(false);
+  const [selectedShop, setSelectedShop] = useState("");
 
   const [bag, setBag] = useState([
     // {
@@ -56,7 +57,6 @@ const AuthState = (props) => {
   const [selectedProducts, setSelectedProducts] = useState([]);
 
   const [orders, setOrders] = useState([
-
     {
       imgurl: require("../assets/kurtagreen.jpg"),
       orderToken: "#ADADX",
@@ -129,6 +129,8 @@ const AuthState = (props) => {
         setSelectedProducts,
         isCoupon,
         setIsCoupon,
+        selectedShop,
+        setSelectedShop
       }}
     >
       {props.children}

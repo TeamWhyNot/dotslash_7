@@ -79,7 +79,7 @@ const Landing = () => {
 
   return (
     <div>
-      <div className="mob flex flex-col justify-center items-center  h-[100vh]">
+      <div className="mob fadeSide flex flex-col justify-center items-center  h-[100vh]">
         <div className="flex flex-col mt-[50%] gap-6">
           <img src={logo} alt="" />
           <h1 className="text-center font-bold text-4xl text-dorange ">

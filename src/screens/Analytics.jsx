@@ -40,7 +40,7 @@ const Analytics = () => {
 
   return (
     <div>
-      <div className="desk deskLogin h-[100vh]">
+      <div className="desk fade deskLogin h-[100vh]">
         <NavbarLogOut />
 
         <div className="h-[80%] w-full flex justify-center items-center mt-14">

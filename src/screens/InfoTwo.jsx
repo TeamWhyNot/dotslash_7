@@ -40,7 +40,7 @@ const InfoTwo = () => {
 
     }
     return (
-        <div className='h-[100vh] w-[100vw] flex items-center justify-start overflow-hidden'>
+        <div className='h-[100vh] w-[100vw] fade flex items-center justify-start overflow-hidden'>
             <div className='h-[100vh] w-[60%]'>
                 <img className='bg-darkOrange' src={shopdet} ></img>
             </div>

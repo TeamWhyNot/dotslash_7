@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import Navbar from '../components/Navbar'
 import shopArt from '../assets/shopLg.svg'
 import customerArt from '../assets/customerLg.svg'
-import devArt from '../assets/devLg.svg'
+
+
 import { Link } from 'react-router-dom'
 import authContext from '../context/authContext'
 const Category = () => {
@@ -19,11 +20,7 @@ const Category = () => {
       category: "customer"
     })
   }
-  const developer = () => {
-    setUserDetail({
-      category: "developer"
-    })
-  }
+ 
 
   return (
     <div>
@@ -41,10 +38,7 @@ const Category = () => {
             <img className='cust' src={customerArt} alt="" />
             Customer
             </div></button></Link>
-            <Link to='/switch'><button className=' font-medium text-lg' onClick={developer}><div className="flex flex-col gap-5 justify-center items-center">
-            <img className='shop' src={devArt} alt="" />
-            Developer
-            </div></button></Link>
+            
           </div>
         </div>
       </div>
@@ -58,15 +52,14 @@ const Category = () => {
             <h1 className='font-bold text-[3rem] leading-normal'>Category</h1>
             </div>
             <div className="categ h-auto mt-11 gap-y-9">
+              <Link to="/switch">
               <button className='flex flex-col gap-2 justify-center items-center'>
                 <img  className="shop"src={shopArt} height="145" width="145" alt="shopkeeper" />
                 <h1 className=' font-medium text-base'>Shopkeeper</h1>
               </button>
-              <button className=' flex flex-col gap-2 justify-center items-center' >
-                <img className="dev" src={devArt} height="145" width="145" alt="developer" />
-                <h1 className=' font-medium text-base'>Developer</h1>
-                </button>
-              <Link to='/signup' className='j '><button className=" w-full flex flex-col gap-2 justify-center items-center ">
+              </Link>
+              
+              <Link to='/signup' className=''><button className=" w-full flex flex-col gap-2 justify-center items-center ">
                 <img className="cust" src={customerArt} height="145" width="145" alt="customer" />
                 <h1 className=' font-medium text-base'>Customer</h1>
                 </button></Link>
