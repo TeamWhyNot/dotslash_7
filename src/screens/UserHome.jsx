@@ -24,7 +24,7 @@ const UserHome = () => {
         <div>
           <Header />
         </div>
-        <div className="p-4 ">
+        <div className="p-4 fadeSide">
           <div>
             <div className="px-2.5 mb-2">
               <div>

@@ -9,7 +9,7 @@ const ContactPage = () => {
     <div className='mob h-100vh'>
         <Header/>
         <NavbarMo/>
-        <div className="flex fade justify-center items-center">
+        <div className="flex fadeSide justify-center items-center">
         <div className="flex flex-col items-center gap-4 h-[35rem] rounded-2xl w-[90%] m-auto pb-4 bg-lOrange">
             <h1 className="  mt-4 font-bold text-3xl text-center">Contact Us!</h1>
          <img src={contact} alt="" />   

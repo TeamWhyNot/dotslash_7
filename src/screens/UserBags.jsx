@@ -47,7 +47,7 @@ const UserBags = () => {
         <div>
           <Header />
         </div>
-        <div className="p-4 h-[680px] overflow-y-auto  ">
+        <div className="p-4 fadeSide h-[680px] overflow-y-auto  ">
           <div className="  ">
             <div>
               <h1 className="text-[28px]">Your Bag</h1>

@@ -45,7 +45,7 @@ const Category = () => {
       </div>
 
          <div className="mob">
-         <div className="mobile mobCategory h-[100vh]">
+         <div className="mobile mobCategory fadeSide h-[100vh]">
           <div className="flex flex-col h-auto ">
             <div className="flex flex-col mt-[25%] p-5">
             <h1 className=' font-bold text-[3rem] leading-normal'>Select</h1>
