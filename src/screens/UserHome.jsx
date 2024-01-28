@@ -6,7 +6,10 @@ import SearchBar from "../components/SearchBar";
 import CardCategory from "../components/CardCategory";
 import ShopCard from "../components/ShopCard";
 import women from "../assets/mobile/pic.svg"
-
+import men from "../assets/mobile/mens2.svg"
+import Acc from "../assets/mobile/acc.svg"
+import makeup from "../assets/mobile/makeup.svg"
+import kids from "../assets/mobile/kids.svg"
 const UserHome = () => {
   return (
     <div className="">
@@ -37,11 +40,11 @@ const UserHome = () => {
 
               <div className=" flex gap-6 overflow-x-auto items-center mt-2 scrollbar-mobile">
                 <CardCategory pic={women} Name='Women' />
-                <CardCategory pic={women} Name='Women' />
-                <CardCategory pic={women} Name='Women' />
-                <CardCategory pic={women} Name='Women' />
-                <CardCategory pic={women} Name='Women' />
-                <CardCategory pic={women} Name='Women' />
+                <CardCategory pic={men} Name='Men' />
+                <CardCategory pic={Acc} Name='Accessories' />
+                <CardCategory pic={makeup} Name='Cosmetics' />
+                <CardCategory pic={kids} Name='Kids' />
+                
               </div>
             </div>
             <div className="mt-8">
