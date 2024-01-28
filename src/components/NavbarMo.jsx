@@ -8,7 +8,7 @@ import contact from "../assets/mobile/IconContct.svg"
 
 const NavbarMo = () => {
     return (
-        <div className=' z-2 p-3 mobile_navbar rounded-tr-lg rounded-tl-lg gap-12 drop-shadow-2xl absolute bottom-0 w-[100%] flex items-center justify-center '>
+        <div className=' bg-white z-20 p-3 mobile_navbar rounded-tr-lg rounded-tl-lg gap-14 flex-1 drop-shadow-2xl absolute bottom-0 w-[100%] flex items-center justify-center '>
             <div>
                 <img src={Shop}></img>
             </div>
