@@ -18,6 +18,8 @@ import ShopKeeperOrderPage from "../screens/ShopKeeperOrderPage";
 import UserBags from "../screens/UserBags";
 import UserOrder from "../screens/UserOrder";
 
+import ContactPage from "../screens/ContactPage";
+
 const routes = [
   {
     path: "/",
@@ -91,6 +93,10 @@ const routes = [
     path: "/userorder",
     element: <UserOrder />,
   },
+  {
+    path: "/hello",
+    element: <ContactPage/>
+  }
 ];
 
 export default routes;
