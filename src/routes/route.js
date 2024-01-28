@@ -12,7 +12,7 @@ import InfoTwo from "../screens/InfoTwo";
 import MyShop from "../screens/MyShop";
 import Test from "../screens/Test";
 import ChatBot from "../screens/ChatBot";
-
+import ProductSection from "../screens/ProductSection";
 import UserHome from "../screens/UserHome";
 import ShopKeeperOrderPage from "../screens/ShopKeeperOrderPage";
 import UserBags from "../screens/UserBags";
@@ -66,6 +66,10 @@ const routes = [
   {
     path: "/chatbot",
     element: <ChatBot />,
+  },
+  {
+    path: "/products",
+    element: <ProductSection/>,
   },
   {
     path: "/test",
