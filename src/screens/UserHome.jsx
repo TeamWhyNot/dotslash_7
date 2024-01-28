@@ -9,7 +9,7 @@ import women from "../assets/mobile/pic.svg"
 import men from "../assets/mobile/mens2.svg"
 import Acc from "../assets/mobile/acc.svg"
 import makeup from "../assets/mobile/makeup.svg"
-import kids from "../assets/mobile/kids.svg"
+import kids from "../assets/mobile/kids2.svg"
 import { Link } from "react-router-dom";
 const UserHome = () => {
   return (
