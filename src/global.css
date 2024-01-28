@@ -237,7 +237,19 @@ input[type=password]:focus {
 
 .fade {
   animation: fadeInDown 1s ease-out;
-  /* Adjust the animation duration and easing as needed */
+  
+}
+
+@keyframes fadeSide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 

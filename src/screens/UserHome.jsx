@@ -31,7 +31,7 @@ const UserHome = () => {
                 <h1>Namaste ,</h1>
               </div>
               <div>
-                <h1 className="text-[28px]">Jiya Patil</h1>
+                <h1 className="text-[28px]">Jiya Trivedi</h1>
               </div>
             </div>
             <div className="">
