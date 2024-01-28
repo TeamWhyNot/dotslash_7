@@ -9,11 +9,11 @@ const SignUp = () => {
   const navigate=useNavigate()
   useEffect(() => {
     
-    // if(localStorage.getItem('authToken')){
-    //   navigate('/shopkeeper')
-    // }else{
-    //   console.log("do signup")
-    // }
+    if(localStorage.getItem('authToken')){
+      navigate('/shopDet')
+    }else{
+      console.log("do signup")
+    }
   
     
   }, [])
@@ -43,7 +43,11 @@ const SignUp = () => {
 
   const handleSignUp = async () => {
     await createUser();
-    navigate('/shopkeeper')
+    navigate('/shopDet')
+  };
+  const handleSignUpMob =  () => {
+    
+    navigate('/userhome')
   };
 
   return (
@@ -158,7 +162,7 @@ const SignUp = () => {
                     required
                   />
                   </div>
-                  <Button onClick={handleSignUp} className="w-[80%] h-[3.5rem]">
+                  <Button onClick={handleSignUpMob} className="w-[80%] h-[3.5rem]">
                   Continue
                 </Button>
                 </div>

@@ -3,16 +3,19 @@ import NavbarMo from "../components/NavbarMo";
 import Header from "../components/Header";
 import OrderCard from "../components/OrderCard";
 import authContext from "../context/authContext";
+import CouponState from "../components/CouponState";
 
 const UserOrder = () => {
   //
 
-  const { orders, setOrders } = useContext(authContext);
+  const { orders, setOrders,isCoupon,setIsCoupon } = useContext(authContext);
   console.log(orders);
   // useEffect to log orders whenever it changes
   useEffect(() => {
     console.log("Updated Orders:", orders);
   }, [orders]);
+
+  
 
   return (
     <div className="">
@@ -23,7 +26,7 @@ const UserOrder = () => {
         <div>
           <Header />
         </div>
-        <div className="p-4 h-[680px] overflow-y-auto  ">
+        <div className={`p-4 h-[680px] overflow-y-auto ${isCoupon && `hidden`}`}>
           <div className="  ">
             <div>
               <h1 className="text-[28px]">My Orders</h1>
@@ -53,6 +56,10 @@ const UserOrder = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={`${!isCoupon &&`hidden`} absolute bottom-0 mb-[100px] w-[100%] flex items-center justify-center `}>
+
+                    <CouponState/>
         </div>
       </div>
     </div>

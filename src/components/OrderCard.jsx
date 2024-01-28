@@ -11,17 +11,18 @@ const OrderCard = ({
   orderCategory,
   orderDate,
 }) => {
-  const { orders, setOrders } = useContext(authContext);
+  const { orders, setOrders,setIsCoupon } = useContext(authContext);
 
   const handleCancelPickup = () => {
     setOrders((prevOrders) =>
       prevOrders.filter((order) => order.orderToken !== orderToken)
     );
   };
+  
 
   return (
-    <div className=" border-t-[0.001rem] p-2 w-[100%]  ">
-      <div className=" gap-2 flex items-center ">
+    <div className={`border-t-[0.001rem] p-2 w-[100%] `}>
+      <div className={`gap-2 flex items-center `}>
         <div>
           <img src={kurta} className="rounded-lg"></img>
         </div>
@@ -55,7 +56,9 @@ const OrderCard = ({
                 Cancel Pickup
               </Button>
             ) : (
-              <Button className="px-2 py-1.5 rounded-full text-xs w-full bg-darkOrange text-white">
+              <Button onClick={()=>{
+                setIsCoupon(true)
+              }} className="px-2 py-1.5 rounded-full text-xs w-full bg-darkOrange text-white">
                 Get Coupons
               </Button>
             )}

@@ -46,6 +46,12 @@ const Login = () => {
         navigate('/shopDet')
 
       };
+      const handleLoginMob =  () => {
+        
+        
+        navigate('/userhome')
+
+      };
     
   return (
     <div>
@@ -126,7 +132,7 @@ const Login = () => {
                     required
                   />
                 </div>
-                <Button onClick={handleLogin} className="w-[80%] h-[3.5rem]">
+                <Button onClick={handleLoginMob} className="w-[80%] h-[3.5rem]">
                   Continue
                 </Button>
               </div>

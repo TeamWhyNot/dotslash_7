@@ -10,6 +10,7 @@ const AuthState = (props) => {
   
   const [Uid, setUid] = useState("");
   const [userDetail, setUserDetail] = useState({});
+  const [isCoupon, setIsCoupon] = useState(false)
   
 
   const [bag, setBag] = useState([
@@ -97,6 +98,8 @@ const AuthState = (props) => {
         setBag,
         orders,
         setOrders,
+        isCoupon,
+        setIsCoupon
       }}
     >
       {props.children}
