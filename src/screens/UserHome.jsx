@@ -39,12 +39,12 @@ const UserHome = () => {
                 <h1>Categories</h1>
               </div>
 
-              <div className=" flex gap-6 overflow-x-auto items-center mt-2 scrollbar-mobile">
-                <CardCategory pic={women} Name='Women' />
+              <div className=" flex  flex-wrap max-w-[22rem]  gap-6 overflow-x-auto items-center mt-2 scrollbar-mobile">
+                <CardCategory  pic={women} Name='Women' />
                 <CardCategory pic={men} Name='Men' />
                 <CardCategory pic={Acc} Name='Accessories' />
                 <CardCategory pic={makeup} Name='Cosmetics' />
-                <CardCategory pic={kids} Name='Kids' />
+                
                 
               </div>
             </div>
@@ -61,7 +61,7 @@ const UserHome = () => {
               </div>
             </div>
             <div className="mt-8">
-              <div className="grid grid-cols-2 gap-3 h-[21rem] overflow-y-auto">
+              <div className="grid grid-cols-2 gap-3 h-[22rem] overflow-y-auto">
                 <Link to='/products' ><ShopCard/></Link>
                 <Link to='/products' ><ShopCard/></Link>
                 <Link to='/products' ><ShopCard/></Link>
