@@ -51,7 +51,7 @@ const ProductUser = ({ location }) => {
       imgurl: require("../assets/kurtablack.jpg"),
       id: 0,
       productName: "Black solid color Kurta",
-      productPrice: 1,
+      productPrice: 999,
       productType: "Clothing",
       productDescription:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu mauris, scelerisque eu mauris id, pretium pulvinar sapien.",

@@ -38,7 +38,7 @@ const OrderCard = ({
               Token ID: {orderToken}
             </p>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between gap-x-8">
             <h1 className="text-sm">{orderCategory}</h1>
             <div>
               <span className="text-sm font-medium text-dark-main">Date: </span>
@@ -47,7 +47,7 @@ const OrderCard = ({
               </span>
             </div>
           </div>
-          <div>
+          <div className="text-2xl">
             <h1 className=" text-darkOrange">Rs {orderPrice}</h1>
           </div>
 
