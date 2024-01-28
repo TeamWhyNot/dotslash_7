@@ -10,6 +10,7 @@ import men from "../assets/mobile/mens2.svg"
 import Acc from "../assets/mobile/acc.svg"
 import makeup from "../assets/mobile/makeup.svg"
 import kids from "../assets/mobile/kids.svg"
+import { Link } from "react-router-dom";
 const UserHome = () => {
   return (
     <div className="">
@@ -61,13 +62,13 @@ const UserHome = () => {
             </div>
             <div className="mt-8">
               <div className="grid grid-cols-2 gap-3 h-[21rem] overflow-y-auto">
-                <ShopCard/>
-                <ShopCard/>
-                <ShopCard/>
-                <ShopCard/>
-                <ShopCard/>
-                <ShopCard/>
-                <ShopCard/>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
+                <Link to='/products' ><ShopCard/></Link>
                 
               </div>
             </div>
