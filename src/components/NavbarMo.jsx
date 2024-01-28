@@ -4,7 +4,7 @@ import cart from "../assets/mobile/cart.svg"
 import magic from "../assets/mobile/magic.svg"
 import profile from "../assets/mobile/profile.svg"
 import coupons from "../assets/mobile/Coupon.svg"
-
+import contact from "../assets/mobile/IconContct.svg"
 
 const NavbarMo = () => {
     return (
@@ -18,11 +18,9 @@ const NavbarMo = () => {
             <div>
                 <img src={magic}></img>
             </div>
+            
             <div>
-                <img src={coupons}></img>
-            </div>
-            <div>
-                <img src={profile}></img>
+                <img src={contact}></img>
             </div>
         </div>
     )

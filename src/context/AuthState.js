@@ -1,44 +1,41 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import authContext from "./authContext";
 
 const AuthState = (props) => {
-  useEffect(() => {
-    
-  
-    
-  }, [localStorage.getItem('authToken')])
-  
+  useEffect(() => {}, [localStorage.getItem("authToken")]);
+
   const [Uid, setUid] = useState("");
   const [userDetail, setUserDetail] = useState({});
   const [isCoupon, setIsCoupon] = useState(false)
-  
 
   const [bag, setBag] = useState([
-    {
-      orderToken: "#ADADX1",
-      orderItemName: "Kurta",
-      orderCategory: "Clothes",
-      orderPrice: 500,
-      onGoing: false,
-      orderDate: "24/01/2024, 08:00pm",
-    },
-    {
-      orderToken: "#ADADX2",
-      orderItemName: "Kurta2",
-      orderCategory: "Ethnic",
-      orderPrice: 5000,
-      onGoing: false,
-      orderDate: "20/01/2024, 04:00pm",
-    },
-    {
-      orderToken: "#ADADX3",
-      orderItemName: "Kurta3",
-      orderCategory: "Marriage",
-      orderPrice: 500,
-      onGoing: true,
-      orderDate: "30/01/2024, 02:00pm",
-    },
+    // {
+    //   orderToken: "#ADADX1",
+    //   orderItemName: "Kurta",
+    //   orderCategory: "Clothes",
+    //   orderPrice: 500,
+    //   onGoing: false,
+    //   orderDate: "24/01/2024, 08:00pm",
+    // },
+    // {
+    //   orderToken: "#ADADX2",
+    //   orderItemName: "Kurta2",
+    //   orderCategory: "Ethnic",
+    //   orderPrice: 5000,
+    //   onGoing: false,
+    //   orderDate: "20/01/2024, 04:00pm",
+    // },
+    // {
+    //   orderToken: "#ADADX3",
+    //   orderItemName: "Kurta3",
+    //   orderCategory: "Marriage",
+    //   orderPrice: 500,
+    //   onGoing: true,
+    //   orderDate: "30/01/2024, 02:00pm",
+    // },
   ]);
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   const [orders, setOrders] = useState([]);
 
@@ -93,11 +90,14 @@ const AuthState = (props) => {
         login,
         createUser,
         setUid,
-        
+
         bag,
         setBag,
         orders,
         setOrders,
+
+        selectedProducts,
+        setSelectedProducts,
         isCoupon,
         setIsCoupon
       }}

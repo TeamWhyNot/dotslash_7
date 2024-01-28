@@ -18,6 +18,8 @@ import ShopKeeperOrderPage from "../screens/ShopKeeperOrderPage";
 import UserBags from "../screens/UserBags";
 import UserOrder from "../screens/UserOrder";
 
+import ContactPage from "../screens/ContactPage";
+
 const routes = [
   {
     path: "/",
@@ -36,7 +38,7 @@ const routes = [
     element: <Category />,
   },
   {
-    path: '/productsUser',
+    path: "/productsUser",
     element: <ProductUser />,
   },
   {
@@ -90,6 +92,13 @@ const routes = [
   {
     path: "/userorder",
     element: <UserOrder />,
+  },
+  {
+    path: "/hello",
+    element: <ContactPage/>
+  },{
+    path: "/productuser",
+    element: <ProductUser />,
   },
 ];
 

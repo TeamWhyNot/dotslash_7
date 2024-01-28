@@ -36,6 +36,7 @@ const UserBags = () => {
   ];
 
   const { bag, setBag } = useContext(authContext);
+  console.log(bag);
 
   return (
     <div className="">
@@ -55,6 +56,7 @@ const UserBags = () => {
               {bag.map((order, index) => (
                 <BagCard
                   key={index}
+                  imgurl={order.imgurl}
                   orderToken={order.orderToken}
                   orderItemName={order.orderItemName}
                   orderCategory={order.orderCategory}
@@ -64,7 +66,14 @@ const UserBags = () => {
                 />
               ))}
             </div>
-           
+            {/* <Button
+              className={
+                "absolute bottom-[80px] right-[20px] px-2.5 py-4 text-black font-medium text-xl"
+              }
+            //   onClick={onClick}
+            >
+              Checkout &#8594;
+            </Button> */}
           </div>
         </div>
       </div>
