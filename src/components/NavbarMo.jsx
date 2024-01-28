@@ -4,7 +4,7 @@ import cart from "../assets/mobile/cart.svg";
 import magic from "../assets/mobile/magic.svg";
 import profile from "../assets/mobile/profile.svg";
 import coupons from "../assets/mobile/Coupon.svg";
-import contact from "../assets/mobile/IconContct.svg";
+import openMail from "../assets/Contact Book.svg";
 import { Link } from "react-router-dom";
 
 const NavbarMo = () => {
@@ -23,7 +23,7 @@ const NavbarMo = () => {
 
       <Link to="/contactpage">
         <div>
-          <img src={contact}></img>
+          <img src={openMail}></img>
         </div>
       </Link>
     </div>

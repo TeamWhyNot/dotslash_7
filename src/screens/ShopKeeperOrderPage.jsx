@@ -192,7 +192,7 @@ const ShopKeeperOrderPage = () => {
       </div> */}
       <NavbarLogOut></NavbarLogOut>
 
-      <div className="h-[100%] w-[100%] ">
+      <div className="h-[100%] fade w-[100%] ">
         <div className="px-8 py-12 flex gap-y-8 flex-col items-center justify-center h-[20%] w-full  ">
           <p className=" text-4xl font-semibold text-darkOrange">My Orders</p>
           <p className=" text-xl font-semibold text-dark-main">

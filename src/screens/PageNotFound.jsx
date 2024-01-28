@@ -9,7 +9,7 @@ const PageNotFound = () => {
         <h1 className=' font-semibold text-3xl'>Please switch to desktop!</h1>
       </div>
       </div>
-      <div className=' desk fade h-[100vh] w-full gap-39 flex flex-col items-center'>
+      <div className=' desk fadeSide h-[100vh] w-full gap-39 flex flex-col items-center'>
         <img src={notFound} alt="" />
         <h1 className=' font-semibold text-3xl'>Please switch to mobile!</h1>
         

@@ -22,7 +22,7 @@ const UserOrder = () => {
       <div>
         <NavbarMo />
       </div>
-      <div className="  ">
+      <div className=" fadeSide ">
         <div>
           <Header />
         </div>

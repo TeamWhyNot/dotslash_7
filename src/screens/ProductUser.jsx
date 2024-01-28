@@ -94,7 +94,7 @@ const ProductUser = ({ location }) => {
   ];
 
   return (
-    <div className="mob h-[100vh]">
+    <div className="mob fadeSide h-[100vh]">
       <div className="img">
         <img height="439" width="390" src={selectedProducts[0].imgurl} alt="" />
       </div>
