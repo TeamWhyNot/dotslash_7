@@ -12,6 +12,7 @@ const BagCard = ({
   orderPrice,
   onGoing,
   orderDate,
+  imgurl,
   // onClick
 }) => {
   const { orders, setOrders } = useContext(authContext);
@@ -28,6 +29,7 @@ const BagCard = ({
       orderPrice: orderPrice,
       onGoing: onGoing,
       orderDate: orderDate,
+      imgurl: imgurl,
     };
     console.log(checkedOutProduct);
     setSelected(!selected);
@@ -84,7 +86,7 @@ const BagCard = ({
     >
       <div className=" gap-2 flex items-center ">
         <div>
-          <img src={kurta} className="rounded-lg"></img>
+          <img src={imgurl} className="rounded-lg h-[180px] w-[150px]"></img>
         </div>
         <div className="flex-col space-y-2 w-[70%]">
           <div className="flex justify-between">
