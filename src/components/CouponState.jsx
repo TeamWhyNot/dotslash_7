@@ -5,7 +5,7 @@ const CouponState = () => {
 
     return (
         <div>
-            <div className=' bg-slate-500 p-2 rounded-lg w-[100%] flex flex-col'>
+            <div className=' bg-[#F6EEEE] shadow-md drop-shadow-md p-2 rounded-lg w-[100%] flex flex-col'>
 
                 <div>
                     <h1>

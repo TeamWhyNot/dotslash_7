@@ -120,7 +120,7 @@ const InfoTwo = () => {
                                     <input type='checkbox' />
                                 </div>
                                 <div className='w-full'>
-                                    <h1>Acept terms and conditions.</h1>
+                                    <h1>Accept terms and conditions.</h1>
                                 </div>
                                 <div className=' ml-10 justify-center flex items-center w-[100%]'>
                                     <Button onClick={handleNext} className='gap-4 p-2 w-[200px] rounded-full'>
