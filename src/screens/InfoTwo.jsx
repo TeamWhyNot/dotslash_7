@@ -42,23 +42,23 @@ const InfoTwo = () => {
     return (
         <div className='h-[100vh] w-[100vw] flex items-center justify-start overflow-hidden'>
             <div className='h-[100vh] w-[60%]'>
-                <img className='' src={shopdet}></img>
+                <img className='bg-darkOrange' src={shopdet} ></img>
             </div>
             <div className='h-[100vh] w-[100%] flex-col space-y-2 ml-10 items-start justify-start '>
-                <div className='h-fit gap-2 flex items-center justify-start '>
+                <div className='h-fit gap-2 flex items-center justify-start  py-2.5'>
                     <div>
-                        <img src={shopLogo}></img>
+                        <img src={shopLogo} ></img>
                     </div>
                     <div>
-                        <h1 className='font-semibold text-2xl'>shopRush</h1>
+                        <h1 className='font-semibold text-2xl'>ShopRush</h1>
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-bold text-2xl'>Your'e almost there!</h1>
+                    <h1 className='font-bold text-2xl py-2'>Your'e almost there!</h1>
 
                 </div>
                 <div>
-                    <h1 className='font-semibold text-2xl'>More Details</h1>
+                    <h1 className='font-semibold text-xl text-dark-main'>More Details</h1>
                 </div>
                 <div className='  flex items-start  w-[100%] h-[100%] '>
                     <div className='bg-[#FAFAFA] p-4 rounded-md w-[80%] space-y-4 h-auto'>

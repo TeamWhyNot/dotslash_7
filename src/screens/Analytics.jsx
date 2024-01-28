@@ -9,6 +9,7 @@ import moneyicon from "../assets/moneyicon.svg";
 import totalcustomericon from "../assets/totalcustomericon.svg";
 import Coupon from "../components/Coupon";
 import LineChartRevenue from "../components/LineChartJs";
+import Sidebar from "../components/Sidebar";
 
 const Analytics = () => {
   const chartDataByYear = {
@@ -41,6 +42,7 @@ const Analytics = () => {
     <div>
       <div className="desk deskLogin h-[100vh]">
         <NavbarLogOut />
+
         <div className="h-[80%] w-full flex justify-center items-center mt-14">
           <div className="h-full w-[100vw] px-10 flex">
             <div
@@ -153,8 +155,8 @@ const Analytics = () => {
                   />
                 </div>
 
-                <SquareCard className={"h-[100%] bg-red-500"}>
-                  <p>hello</p>
+                <SquareCard className={"h-[100%] bg-red-500 flex items-center justify-center pt-10"}>
+                  <img src={require('../assets/piechart.png')} className="h-[250px] w-[80%]"></img>
                 </SquareCard>
               </div>
             </div>
@@ -165,8 +167,8 @@ const Analytics = () => {
                 </p>
                 <div className="w-full h-[90%] space-y-4 overflow-y-auto scrollbar-hidden ">
                   <Coupon discount="20% off" code="XXXXXX" />
-                  <Coupon discount="20% off" code="XXXXXX" />
-                  <Coupon discount="20% off" code="XXXXXX" />
+                  <Coupon discount="30% off" code="XXXXXX" />
+                  <Coupon discount="BUY 1 GET 1 FREE" code="XXXXXX" />
                 </div>
               </div>
             </div>

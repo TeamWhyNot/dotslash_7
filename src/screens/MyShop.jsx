@@ -5,6 +5,7 @@ import Details from "../components/Details";
 import { Button } from "../components/Button";
 import Modal from "../components/Modal";
 import authContext from "../context/authContext";
+import Sidebar from "../components/Sidebar";
 import shopContext from "../context/shop/shopContext";
 import Loader from "../components/Loader";
 
@@ -116,8 +117,11 @@ const MyShop = ({ onClick }) => {
             ></Modal>
           </div>
         </div>
+        </div>
+
       </div>
-    </div>
+        </div>
+        </div>
   );
 };
 

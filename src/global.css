@@ -84,9 +84,89 @@ input[type=password]:focus {
 
 }
 
-.scrollbar-hidden::-webkit-scrollbar {
-  width: 6px;
+ .scrollbar-hidden::-webkit-scrollbar {
+   width: 6px;
+   /* Set the width of the scrollbar */
+ }
+
+ .scrollbar-hidden::-webkit-scrollbar-thumb {
+   background-color: #FF9800;
+   /* Set the color of the thumb (the draggable part) */
+   border-radius: 8px;
+   /* Set the border-radius for rounded edges */
+ }
+
+ .scrollbar-hidden::-webkit-scrollbar-track {
+   background-color: transparent;
+   /* Set the color of the track (the non-draggable part) */
+ }
+
+ /* .scrollbar-mobile::-webkit-scrollbar {
+  width: 1px;
   /* Set the width of the scrollbar */
+
+
+.scrollbar-mobile::-webkit-scrollbar-thumb {
+  background-color: #FF9800;
+  /* Set the color of the thumb (the draggable part) */
+  border-radius: 8px;
+  /* Set the border-radius for rounded edges */
+}
+
+.scrollbar-mobile::-webkit-scrollbar-track {
+  background-color: #FF9800;
+
+  /* Set the color of the track (the non-draggable part) */
+}
+
+ /* .scrollbar-mobile::-webkit-scrollbar {
+  width: 1px;
+  /* Set the width of the scrollbar */
+
+
+.scrollbar-mobile::-webkit-scrollbar-thumb {
+  background-color: #FF9800;
+  /* Set the color of the thumb (the draggable part) */
+  border-radius: 8px;
+  /* Set the border-radius for rounded edges */
+}
+
+.scrollbar-mobile::-webkit-scrollbar-track {
+  background-color: #FF9800;
+
+  /* Set the color of the track (the non-draggable part) */
+}
+
+
+
+  /* -------options----- */
+  .options{
+    grid-column: 1/span2 ;
+  }
+
+
+
+  /* -------options----- */
+  .options{
+    grid-column: 1/span2 ;
+  }
+
+
+  /* -----sidebar---- */
+  .side{
+    box-shadow: 5px 0px 20px 0px rgba(230, 111, 20, 0.25);
+  }
+
+  /* ---MediaQuery----*/
+  @media  (min-width: 768px) {
+    .mob {
+      display: none; 
+    }
+}
+@media  (max-width: 768px) {
+    .desk{
+      display: none; 
+    }
 }
 
 .scrollbar-hidden::-webkit-scrollbar-thumb {

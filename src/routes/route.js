@@ -6,13 +6,13 @@ import Category from "../screens/Category";
 import PageNotFound from "../screens/PageNotFound";
 import Analytics from "../screens/Analytics";
 import ShopDet from "../screens/ShopDet";
-
+import ProductUser from "../screens/ProductUser";
 import Option from "../screens/Option";
 import InfoTwo from "../screens/InfoTwo";
 import MyShop from "../screens/MyShop";
 import Test from "../screens/Test";
 import ChatBot from "../screens/ChatBot";
-
+import ProductSection from "../screens/ProductSection";
 import UserHome from "../screens/UserHome";
 import ShopKeeperOrderPage from "../screens/ShopKeeperOrderPage";
 import UserBags from "../screens/UserBags";
@@ -34,6 +34,10 @@ const routes = [
   {
     path: "/category",
     element: <Category />,
+  },
+  {
+    path: '/productsUser',
+    element: <ProductUser />,
   },
   {
     path: "/analytics",
@@ -62,6 +66,10 @@ const routes = [
   {
     path: "/chatbot",
     element: <ChatBot />,
+  },
+  {
+    path: "/products",
+    element: <ProductSection/>,
   },
   {
     path: "/test",

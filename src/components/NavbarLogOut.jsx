@@ -11,13 +11,23 @@ const NavbarLogOut = () => {
         <div className="logo flex gap-2 items-center  ">
           <img src={logo} alt="" />
           <Link to="/">
-            <h1 className=" font-semibold text-2xl ">shopRush</h1>
+            <h1 className=" font-semibold text-2xl ">ShopRush</h1>
           </Link>
         </div>
         <div className="flex items-center font-medium justify-between w-[30%] text-black text-lg gap-x-5 font-inter ">
-          <div className="cursor-pointer">Shop</div>
-          <div className=" cursor-pointer">Advice</div>
-          <div className=" cursor-pointer">Analytics</div>
+          <Link to="/myshop">
+            <div className="cursor-pointer">Shop</div>
+          </Link>
+          <Link to='/chatbot'>
+            <div className=" cursor-pointer">Advice</div>
+          </Link>
+          <Link to='/analytics'>
+            <div className=" cursor-pointer">Analytics</div>
+          </Link>
+          <Link to='/shopkeeperorderpage'>
+            <div className=" cursor-pointer">Orders</div>
+          </Link>
+        
         </div>
 
         <div className="flex gap-5 justify-center items-center">
