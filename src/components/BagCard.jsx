@@ -81,7 +81,7 @@ const BagCard = ({
   return (
     <div
       className={`border-t-[0.001rem] p-2 w-[100%] ${
-        selected ? "bg-green-300" : ""
+        selected ? "bg-vlOrange" : ""
       }`}
     >
       <div className=" gap-2 flex items-center ">

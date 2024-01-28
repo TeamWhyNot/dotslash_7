@@ -12,17 +12,18 @@ const OrderCard = ({
   orderDate,
   imgurl,
 }) => {
-  const { orders, setOrders } = useContext(authContext);
+  const { orders, setOrders,setIsCoupon } = useContext(authContext);
 
   const handleCancelPickup = () => {
     setOrders((prevOrders) =>
       prevOrders.filter((order) => order.orderToken !== orderToken)
     );
   };
+  
 
   return (
-    <div className=" border-t-[0.001rem] p-2 w-[100%]  ">
-      <div className=" gap-2 flex items-center ">
+    <div className={`border-t-[0.001rem] p-2 w-[100%] `}>
+      <div className={`gap-2 flex items-center `}>
         <div>
           <img
             src={imgurl}
@@ -37,7 +38,7 @@ const OrderCard = ({
               Token ID: {orderToken}
             </p>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between gap-x-8">
             <h1 className="text-sm">{orderCategory}</h1>
             <div>
               <span className="text-sm font-medium text-dark-main">Date: </span>
@@ -46,7 +47,7 @@ const OrderCard = ({
               </span>
             </div>
           </div>
-          <div>
+          <div className="text-2xl">
             <h1 className=" text-darkOrange">Rs {orderPrice}</h1>
           </div>
 
@@ -59,7 +60,9 @@ const OrderCard = ({
                 Cancel Pickup
               </Button>
             ) : (
-              <Button className="px-2 py-1.5 rounded-full text-xs w-full bg-darkOrange text-white">
+              <Button onClick={()=>{
+                setIsCoupon(true)
+              }} className="px-2 py-1.5 rounded-full text-xs w-full bg-darkOrange text-white">
                 Get Coupons
               </Button>
             )}

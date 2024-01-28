@@ -1,7 +1,7 @@
 import React from 'react'
-import pic from "../assets/mobile/pic.svg"
 
-const CardCategory = () => {
+
+const CardCategory = ({pic,Name}) => {
     return (
         <div className='flex items-center  space-y-2'>
             <div className=' space-y-2 '>
@@ -10,7 +10,7 @@ const CardCategory = () => {
                 </div>
 
                 <div className='flex items-center justify-center'>
-                    <h1>Women</h1>
+                    <h1>{Name}</h1>
                 </div>
             </div>
 

@@ -6,8 +6,27 @@ const AuthState = (props) => {
 
   const [Uid, setUid] = useState("");
   const [userDetail, setUserDetail] = useState({});
+  const [isCoupon, setIsCoupon] = useState(false);
 
   const [bag, setBag] = useState([
+    // {
+    //   imgurl: require("../assets/kurtagreen.jpg"),
+    //   orderToken: "#ADADX",
+    //   orderItemName: "Green Kurta",
+    //   orderCategory: "Clothes",
+    //   orderPrice: 500,
+    //   onGoing: false,
+    //   orderDate: "24/01/2024, 08:00pm",
+    // },
+    {
+      imgurl: require("../assets/kurtayellow.jpg"),
+      orderToken: "#ADADX",
+      orderItemName: "Yellow Kurta",
+      orderCategory: "Ethnic",
+      orderPrice: 5000,
+      onGoing: true,
+      orderDate: "31/01/2024, 04:00pm",
+    },
     // {
     //   orderToken: "#ADADX1",
     //   orderItemName: "Kurta",
@@ -36,7 +55,18 @@ const AuthState = (props) => {
 
   const [selectedProducts, setSelectedProducts] = useState([]);
 
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([
+
+    {
+      imgurl: require("../assets/kurtagreen.jpg"),
+      orderToken: "#ADADX",
+      orderItemName: "Kurta",
+      orderCategory: "Clothes",
+      orderPrice: 500,
+      onGoing: false,
+      orderDate: "24/01/2024, 08:00pm",
+    },
+  ]);
 
   const createUser = async () => {
     const response = await fetch("http://localhost:5000/api/auth/createuser", {
@@ -97,6 +127,8 @@ const AuthState = (props) => {
 
         selectedProducts,
         setSelectedProducts,
+        isCoupon,
+        setIsCoupon,
       }}
     >
       {props.children}

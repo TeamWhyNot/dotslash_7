@@ -5,12 +5,13 @@ import Details from "../components/Details";
 import { Button } from "../components/Button";
 import Modal from "../components/Modal";
 import authContext from "../context/authContext";
-import Sidebar from "../components/Sidebar";
 import shopContext from "../context/shop/shopContext";
+import Loader from "../components/Loader";
 
 const MyShop = ({ onClick }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const { getShop, shop, getProduct, productData } = useContext(shopContext)
+  const [isLoading, setIsLoading] = useState(true)
   const openModal = () => {
     setModalOpen(true);
   };
@@ -26,9 +27,14 @@ const MyShop = ({ onClick }) => {
 
     getShop()
     getProduct()
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
 
   }, [])
-  console.log(productData)
+  if(isLoading){
+    return <Loader/>
+  }
 
 
 
@@ -84,11 +90,9 @@ const MyShop = ({ onClick }) => {
 
   return (
     <div className="desktop h-[100vh]">
-       <div className="flex gap-6">
-       <Sidebar/>
-      <div className="flex justify-center items-center  w-full ">
-      <div className="mainShopDet grid grid-cols-2 w-full gap-3">
-        <div className="detailCard flex justify-center items-center h-[90vh] w-[90%] border-r-2 border-black ">
+      <NavbarLogOut />
+      <div className="mainShopDet grid grid-cols-2  gap-3">
+        <div className="detailCard  flex justify-center items-center h-[90vh] w-[90%] border-r-2 border-black ">
           <Details
             shopname={shop.shopName}
             shoptype={shop.category}
@@ -112,11 +116,8 @@ const MyShop = ({ onClick }) => {
             ></Modal>
           </div>
         </div>
-        </div>
-
       </div>
-        </div>
-        </div>
+    </div>
   );
 };
 

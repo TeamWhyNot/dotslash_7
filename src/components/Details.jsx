@@ -3,7 +3,7 @@ import sample from "../assets/sample1.png";
 import { Button } from "./Button";
 const Details = ({shopname,shoptype,location,description}) => {
   return (
-    <div className="h-[85%]  border-2 z-[999] border-darkOrange rounded-3xl  overflow-hidden">
+    <div className="h-[85%] shadow-lg drop-shadow-lg  border-2 z-[999] border-darkOrange rounded-3xl  overflow-hidden">
       <div className="detailcard  h-full  w-[32rem] py-2 bg-white ">
         <div className="image p-2 h-[45%] ">
           <img className="w-full px-4 " src={sample} alt="" srcset="" />
