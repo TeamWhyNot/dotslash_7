@@ -51,16 +51,21 @@ const UserHome = () => {
                 </div>
                 <div className="w-[60%]">
                   <div className=" justify-end flex w-[100%] ">
-                    <h1>view all</h1>
+                    <h1>View all</h1>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-8">
-              <div className="flex gap-2 items-center justify-center">
-                <div>
-                  <ShopCard />
-                </div>
+              <div className="grid grid-cols-2 gap-3 h-[21rem] overflow-y-auto">
+                <ShopCard/>
+                <ShopCard/>
+                <ShopCard/>
+                <ShopCard/>
+                <ShopCard/>
+                <ShopCard/>
+                <ShopCard/>
+                
               </div>
             </div>
           </div>
