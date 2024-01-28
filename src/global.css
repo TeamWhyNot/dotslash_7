@@ -61,11 +61,12 @@ input[type=password]:focus {
 
 }
 
-/*=======Categoryyy=======*/
-.categ {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+ /*=======Categoryyy=======*/
+ .categ {
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+   justify-content: center;
+ }
 
 .j {
   grid-column: 1 / span 2;

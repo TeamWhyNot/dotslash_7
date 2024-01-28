@@ -186,7 +186,7 @@ const ShopKeeperOrderPage = () => {
   ];
 
   return (
-    <div className="desktop h-[100vh]  flex flex-col ">
+    <div className="desktop h-[100vh]  fade flex flex-col ">
       {/* <div className="h-[100%] w-[25%] flex gap-6">
         <Sidebar></Sidebar>
       </div> */}

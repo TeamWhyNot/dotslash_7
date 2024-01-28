@@ -4,10 +4,10 @@ const SearchBar = () => {
   return (
     <div className=''>
       <div className='flex gap-2 items-center justify-center'>
-        <input className=' bg-[#F3F3F3] rounded-md w-[80%] p-3'
+        <input className=' bg-[#F3F3F3] rounded-md w-[100%] p-3'
           placeholder='Search'>
         </input>
-        <img src={voice}></img>
+       
       </div>
     </div>
   )

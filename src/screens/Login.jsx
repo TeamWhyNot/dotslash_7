@@ -56,7 +56,7 @@ const Login = () => {
   return (
     <div>
       <div className="desk">
-        <div className="desktop deskLogin h-[100vh]">
+        <div className="fade desktop deskLogin h-[100vh]">
           <Navbar />
           <div className="flex justify-center items-center  gap-16 m-auto p-auto">
             <div className="container grid  ">
@@ -99,7 +99,7 @@ const Login = () => {
       </div>
 
       <div className="mob">
-        <div className="mobile fade mobSignup h-[100vh]">
+        <div className="mobile fadeSide mobSignup h-[100vh]">
           <div className="flex w-full">
             <div className="flex flex-col h-auto w-full ">
               <div className="flex flex-col mt-[25%] p-5">

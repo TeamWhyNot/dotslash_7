@@ -148,7 +148,7 @@ const ProductSection = ({}) => {
   );
   return (
     <div>
-      <div className="flex  flex-col gap-5 "></div>
+      <div className="flex fade flex-col gap-5 "></div>
       <Header />
       <div className="p-4">
         <h1 className="text-[28px]">Products</h1>
