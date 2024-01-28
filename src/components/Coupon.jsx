@@ -10,11 +10,11 @@ const Coupon = ({ discount, code }) => {
       <div className="text-center">
         <p className="text-3xl font-medium font-roboto pb-4   ">{discount}</p>
       </div>
-      <div className="flex w-full justify-between px-12 items-center">
+      <div className="flex w-full gap-x-2 justify-between px-12 items-center">
         <p className="w-20 text-xl font-medium">{code}</p>
         <Button onClick={()=>{
           setIsCoupon(false)
-        }} className="text-white text-lg py-1 px-6 rounded-full">
+        }} className="text-white text-sm px-2  rounded-full">
           Claim
         </Button>
       </div>

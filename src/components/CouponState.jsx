@@ -8,8 +8,8 @@ const CouponState = () => {
             <div className=' bg-[#F6EEEE] shadow-md drop-shadow-md p-2 rounded-lg w-[100%] flex flex-col'>
 
                 <div>
-                    <h1>
-                        Hurray!!!
+                    <h1 className='text-xl'>
+                         Hurray 🎊🎊
                     </h1>
                 </div>
                 <div className='space-y-2'>
