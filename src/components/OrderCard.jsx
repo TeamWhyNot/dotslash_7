@@ -10,6 +10,7 @@ const OrderCard = ({
   orderPrice,
   orderCategory,
   orderDate,
+  imgurl,
 }) => {
   const { orders, setOrders } = useContext(authContext);
 
@@ -23,7 +24,10 @@ const OrderCard = ({
     <div className=" border-t-[0.001rem] p-2 w-[100%]  ">
       <div className=" gap-2 flex items-center ">
         <div>
-          <img src={kurta} className="rounded-lg"></img>
+          <img
+            src={imgurl}
+            className="rounded-lg h-[180px] w-[150px]"
+          ></img>
         </div>
         <div className="flex-col space-y-2 w-[70%]">
           <div className="flex justify-between w-full">

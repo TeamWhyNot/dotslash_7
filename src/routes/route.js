@@ -38,7 +38,7 @@ const routes = [
     element: <Category />,
   },
   {
-    path: '/productsUser',
+    path: "/productsUser",
     element: <ProductUser />,
   },
   {
@@ -96,7 +96,10 @@ const routes = [
   {
     path: "/hello",
     element: <ContactPage/>
-  }
+  },{
+    path: "/productuser",
+    element: <ProductUser />,
+  },
 ];
 
 export default routes;
