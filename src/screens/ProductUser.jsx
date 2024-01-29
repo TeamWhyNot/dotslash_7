@@ -11,6 +11,8 @@ import authContext from "../context/authContext";
 const ProductUser = ({ location }) => {
   const navigate = useNavigate();
   const { selectedProducts, setSelectedProducts } = useContext(authContext);
+  // const { selectedProducts2, setSelectedProducts2 } = useContext(authContext);
+  // console.log(selectedProducts);
   console.log(selectedProducts);
 
   const { productData, setProductData } = useContext(shopContext);
@@ -32,10 +34,10 @@ const ProductUser = ({ location }) => {
   const handleAddToBag = () => {
     const productToAdd = {
       orderToken: generateOrderToken(),
-      orderItemName: selectedProducts[0].productName,
-      orderPrice: selectedProducts[0].productPrice,
-      orderCategory: selectedProducts[0].productType,
-      imgurl: selectedProducts[0].imgurl,
+      orderItemName: selectedProducts.productName,
+      orderPrice: selectedProducts.productPrice,
+      orderCategory: selectedProducts.productType,
+      imgurl: selectedProducts.imgurl,
       onGoing: true,
       orderDate: "30th Jan, 09:00pm",
       //   productInStock: product[0].productInStock,
@@ -95,19 +97,19 @@ const ProductUser = ({ location }) => {
 
   return (
     <div className="mob fadeSide h-[100vh]">
-      <div className="img">
-        <img height="439" width="390" src={selectedProducts[0].imgurl} alt="" />
+      <div className="img " >
+        <img height="300" width="390" src={selectedProducts.imgurl} alt="" className="aspect-[5/8]"/>
       </div>
       <div className="mainContainer flex flex-col gap-4 p-4 pb-[5rem]">
         <div className="flex flex-col gap-[0.3rem]">
           <h1 className="title text-[1.5rem] font-[800]">
-            {selectedProducts[0].productName}
+            {selectedProducts.productName}
           </h1>
           <h1 className="rupees text-[1.5rem] font-[700]">
-            ₹ {selectedProducts[0].productPrice}
+            ₹ {selectedProducts.productPrice}
           </h1>
           <h1 className="des  text-[1rem] font-[500]">
-            {selectedProducts[0].productDescription}
+            {selectedProducts.productDescription}
           </h1>
         </div>
         <div className="flex flex-col gap-[0.5rem]">

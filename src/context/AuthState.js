@@ -19,15 +19,15 @@ const AuthState = (props) => {
     //   onGoing: false,
     //   orderDate: "24/01/2024, 08:00pm",
     // },
-    {
-      imgurl: require("../assets/kurtayellow.jpg"),
-      orderToken: "#ADADX",
-      orderItemName: "Yellow Kurta",
-      orderCategory: "Ethnic",
-      orderPrice: 5000,
-      onGoing: true,
-      orderDate: "31/01/2024, 04:00pm",
-    },
+    // {
+    //   imgurl: require("../assets/kurtayellow.jpg"),
+    //   orderToken: "#ADADX",
+    //   orderItemName: "Yellow Kurta",
+    //   orderCategory: "Ethnic",
+    //   orderPrice: 5000,
+    //   onGoing: true,
+    //   orderDate: "31/01/2024, 04:00pm",
+    // },
     // {
     //   orderToken: "#ADADX1",
     //   orderItemName: "Kurta",
@@ -54,7 +54,9 @@ const AuthState = (props) => {
     // },
   ]);
 
-  const [selectedProducts, setSelectedProducts] = useState([]);
+  // const [selectedProducts, setSelectedProducts] = useState([]);
+
+  const [selectedProducts, setSelectedProducts] = useState({});
 
   const [orders, setOrders] = useState([
     {
@@ -127,10 +129,11 @@ const AuthState = (props) => {
 
         selectedProducts,
         setSelectedProducts,
+
         isCoupon,
         setIsCoupon,
         selectedShop,
-        setSelectedShop
+        setSelectedShop,
       }}
     >
       {props.children}

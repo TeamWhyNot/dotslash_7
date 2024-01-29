@@ -7,16 +7,19 @@ import authContext from "../context/authContext";
 const ProductSection = ({}) => {
   const navigate = useNavigate();
   const { selectedProducts, setSelectedProducts } = useContext(authContext);
+  // const { selectedProducts2, setSelectedProducts2 } = useContext(authContext);
   const { selectedShop, setSelectedShop } = useContext(authContext);
 
   const handleAddToBag = (index) => {
-    const selectedProduct = products1[index];
+    const selectedProduct = filteredProducts[index];
     console.log(selectedProduct);
-    setSelectedProducts((prevSelectedProducts) => [
-      ...prevSelectedProducts,
-      selectedProduct,
-    ]);
+
+    // setSelectedProducts((prevSelectedProducts) => [
+    //   ...prevSelectedProducts,
+    //   selectedProduct,
+    // ]);
     console.log(selectedShop);
+    setSelectedProducts(() => ({ ...selectedProduct }));
 
     // const { imgurl, productName, productPrice, id } = selectedProduct;
     // console.log(productName, productPrice, id);
@@ -146,6 +149,7 @@ const ProductSection = ({}) => {
   const filteredProducts = products1.filter(
     (product) => product.shopName === selectedShop
   );
+  console.log(filteredProducts);
   return (
     <div>
       <div className=" fadeSide flex fade flex-col gap-5 "></div>

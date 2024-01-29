@@ -9,7 +9,7 @@ const GenCard = ({ productName, productPrice, imgurl, onClick }) => {
         <img
           height="174"
           width="155"
-          className="border-2 border-gainsboro rounded-[10%] shadow-2xl"
+          className="border-2 border-gainsboro rounded-[10%] shadow-2xl aspect-[3/4]"
           src={imgurl}
           alt=""
         />

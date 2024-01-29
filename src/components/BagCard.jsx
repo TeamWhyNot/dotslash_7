@@ -18,6 +18,9 @@ const BagCard = ({
   const { orders, setOrders } = useContext(authContext);
   const { bag, setBag } = useContext(authContext);
   const [selected, setSelected] = useState(false);
+  const [timeStr, setTimeStr] = useState("");
+  // const [checkedOutProduct, setCheckedOutProduct] = useState();
+
   // console.log(bag);
   const navigate = useNavigate();
 
@@ -28,7 +31,7 @@ const BagCard = ({
       orderCategory: orderCategory,
       orderPrice: orderPrice,
       onGoing: onGoing,
-      orderDate: orderDate,
+      orderDate: timeStr,
       imgurl: imgurl,
     };
     console.log(checkedOutProduct);
@@ -63,9 +66,9 @@ const BagCard = ({
       prevBag.filter((order) => order.orderToken !== orderToken)
     );
 
-    setOrders((prevOrders) =>
-      prevOrders.filter((order) => order.orderToken !== orderToken)
-    );
+    // setOrders((prevOrders) =>
+    //   prevOrders.filter((order) => order.orderToken !== orderToken)
+    // );
   };
 
   // const handleCancelPickup = () => {
@@ -73,6 +76,36 @@ const BagCard = ({
   //     prevOrders.filter((order) => order.orderToken !== orderToken)
   //   );
   // };
+
+  const currentDate = new Date();
+  const day = currentDate.getDate() + 1;
+  const month = currentDate.toLocaleString("en-us", { month: "short" });
+  const formattedDate = `${day} ${
+    month.charAt(0).toUpperCase() + month.slice(1)
+  }`;
+
+  const handleTimeSlot = (e) => {
+    // console.log(formattedDate);
+    const timeStr = `${formattedDate} ${e.target.value}`;
+
+    // console.log(timeStr);
+    // const indexToUpdate = orders.findIndex(
+    //   (order) => order.orderToken === orderToken
+    // );
+
+    // // If the order is found, update its orderDate property
+    // if (indexToUpdate !== -1) {
+    //   const updatedOrders = [...orders];
+    //   updatedOrders[indexToUpdate] = {
+    //     ...updatedOrders[indexToUpdate],
+    //     orderDate: timeStr,
+    //   };
+    //   setOrders(updatedOrders);
+    // }
+
+    // return timeStr;
+    setTimeStr(timeStr);
+  };
 
   const handleCheckout = () => {
     navigate("/userorder");
@@ -100,21 +133,24 @@ const BagCard = ({
             <h1 className=" text-darkOrange">Rs {orderPrice}</h1>
           </div>
           <div className="flex items-center justify-between">
-            <select className=" w-[60%] h-[40%]  bg-transparent rounded text-sm">
+            <select
+              className=" w-[60%] h-[40%]  bg-transparent rounded text-sm"
+              onChange={handleTimeSlot}
+            >
               <option value="" disabled selected hidden>
                 Choose time slot
               </option>
               <option value="02:00pm" className="bg-white text-darkOrange">
-                29 Jan, 02:00pm
+                {formattedDate} 02:00pm
               </option>
               <option value="04:00pm" className="bg-white text-darkOrange">
-                29 Jan, 04:00pm
+                {formattedDate} 04:00pm
               </option>
               <option value="06:00pm" className="bg-white text-darkOrange">
-                29 Jan, 06:00pm
+                {formattedDate} 06:00pm
               </option>
               <option value="08:00pm" className="bg-white text-darkOrange">
-                29 Jan, 08:00pm
+                {formattedDate} 08:00pm
               </option>
             </select>
             <div className="flex gap-x-2">

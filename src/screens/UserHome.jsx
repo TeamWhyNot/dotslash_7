@@ -34,8 +34,8 @@ const UserHome = () => {
                 <h1 className="text-[28px]">Jiya Trivedi</h1>
               </div>
             </div>
-            <div className="">
-              <SearchBar />
+            <div className="mt-8">
+              {/* <SearchBar /> */}
             </div>
             <div className="">
               <div className="mt-2">
@@ -58,7 +58,7 @@ const UserHome = () => {
                 </div>
                 <div className="w-[60%]">
                   <div className=" justify-end flex w-[100%] ">
-                    <h1>View all</h1>
+                    {/* <h1>View all</h1> */}
                   </div>
                 </div>
               </div>
