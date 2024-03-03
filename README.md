@@ -32,12 +32,14 @@ ShopRush is an innovative ecommerce platform aimed at empowering local businesse
 
 ## Screenshots
 
-![final-landing](./src/pages/assets/landingPg.png)
-
-![image 1](./src/pages/assets/user1.png)
-![image 2](./src/pages/assets/user3.png)
-![image 3](./src/pages/assets/user7.png)
-![image 4](./src/pages/assets/admin.png)
+  <img src="./src/assets/ss_ShopRush/acc_shop.png" alt="final-landing" width="600" height="350">
+  <img src="./src/assets/ss_ShopRush/chatbot_shopkeeper.jpeg" alt="image 1" width="600" height="350">
+<p float="left">
+  <img src="./src/assets/ss_ShopRush/landing_mobile.png" alt="image 2" width="243" height="527">
+  <img src="./src/assets/ss_ShopRush/home_customer.jpeg" alt="image 3" width="243" height="527">
+  <img src="./src/assets/ss_ShopRush/bag.png" alt="image 4" width="243" height="527">
+  <img src="./src/assets/ss_ShopRush/products.jpeg" alt="image 5" width="243" height="527">
+</p>
 
 
 
