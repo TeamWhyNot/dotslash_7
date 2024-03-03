@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# ShopRush
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Overview
 
-## Available Scripts
+	
+Local businesses and home-based entrepreneurs face significant challenges in establishing and growing their online presence. The complexities of setting up and managing an online shop, lack of guidance, and limited access to digital marketing tools hinder their growth. Users often struggle to find local products efficiently, and the shopping process can be time-consuming.
 
-In the project directory, you can run:
+## Proposed Solution
 
-### `npm start`
+Introducing ShopRush!!
+ShopRush is an innovative ecommerce platform aimed at empowering local businesses and home-based entrepreneurs. It addresses the challenges in the current market by providing a simplified online shop setup and efficient product listings. ShopRush offers users a time-saving shopping experience, bringing all available products in their area to their fingertips.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features of Proposed Solution
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Simplified Shop Setup:
+- Easily create and manage online shops with a user-friendly interface, eliminating the complexities of establishing an online presence for local businesses.
 
-### `npm test`
+### 2. Time-Saving and Efficient Shopping Experience
+- Users benefit from in-store pickups, streamlining the shopping process and saving time on local purchases.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3.AI-Powered Business Guidance:
+- An intelligent chatbot guides entrepreneurs in real-time, offering valuable insights and advice for running successful businesses.
 
-### `npm run build`
+### 4.Comprehensive Dashboard:
+-Shopkeepers gain access to a comprehensive dashboard, providing real-time user analytics and predictive insights for informed decision-making.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5.Digital Marketing Tools:
+-Enable digital marketing for shops, helping sellers reach a broader audience and drive traffic to their online storefronts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 6.Promoting Local Digitization:
+-Contribute to the digitization of local commerce, bringing technological advantages to small businesses and boosting competitiveness.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+![final-landing](./src/pages/assets/landingPg.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image 1](./src/pages/assets/user1.png)
+![image 2](./src/pages/assets/user3.png)
+![image 3](./src/pages/assets/user7.png)
+![image 4](./src/pages/assets/admin.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Team Members
 
-## Learn More
+- Toyash Patil
+- Jiya Trivedi
+- Atharva Upare
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
